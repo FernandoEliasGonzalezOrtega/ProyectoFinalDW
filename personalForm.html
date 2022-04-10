@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datos Personales</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                </a> 
+                <p class="fs-3"><b>Consorcio Vengadores S. A. de C. V.</b></p>                            
+            </div>
+        </nav>
+        <div class="col-md-6">
+            <form>
+                <h1>Expediente</h1>
+                <h3>Datos Personales</h3>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4">
+                        <label>Nombre(s)</label>
+                        <input type="text" class="form-control" placeholder="Nombre(s)" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Apellido Paterno</label>
+                        <input type="text" class="form-control" placeholder="Apellido Paterno" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Apellido Materno</label>
+                        <input type="text" class="form-control" placeholder="Apellido Materno">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4">
+                        <label>Fecha de Nacimiento</label>
+                        <input type="datetime" class="form-control" placeholder="Fecha de Nacimiento" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>CURP</label>
+                        <input type="file" class="form-control" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Género</label>
+                        <select class="form-control" required>
+                          <option selected>Seleccionar...</option>
+                          <option>Estado 1</option>
+                          <option>Estado 2</option>
+                          <option>Estado 3</option>
+                        </select>
+                    </div>
+                </div>
+                <H3>Dirección</H3>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12">
+                        <label>Calle</label>
+                        <input type="text" class="form-control" placeholder="Calle" required>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-3">
+                        <label>No. Exterior</label>
+                        <input type="text" class="form-control" placeholder="#####" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label>No. Interior</label>
+                        <input type="text" class="form-control" placeholder="#####">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Colonia</label>
+                        <input type="text" class="form-control" placeholder="Colonia" required>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="form-group col-md-6">
+                        <label>Municipio</label>
+                        <input type="text" class="form-control" placeholder="Municipio" required>
+                    </div> 
+                    <div class="form-group col-md-4">
+                        <label>Estado</label>
+                        <select class="form-control" required>
+                          <option selected>Seleccionar...</option>
+                          <option>Estado 1</option>
+                          <option>Estado 2</option>
+                          <option>Estado 3</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label>C. P.</label>
+                        <input type="text" class="form-control" placeholder="Código Postal" required>
+                      </div> 
+                </div>
+                <h3>Contacto</h3>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6">
+                        <label>Teléfono Celular</label>
+                        <input type="text" class="form-control" placeholder="5512345678" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Teléfono Residencial</label>
+                        <input type="text" class="form-control" placeholder="5512345678" required>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-6">
+                        <label>Contacto de Emergencia</label>
+                        <input type="text" class="form-control" placeholder="Contacto de Emergencia" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Teléfono de Emergencia</label>
+                        <input type="text" class="form-control" placeholder="Teléfono de Emergencia" required>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12 justify-content-md-center">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
