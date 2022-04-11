@@ -1,0 +1,50 @@
+
+/*
+    Paleta de Color
+    A - #01587a
+    B - #5cb3c1
+    C - #99d8dd
+    D - #e1e8ec
+    E - #f3ba00
+*/
+
+.bg-A{
+    background-color: #01587a;
+}
+
+.bg-B{
+    background-color: #5cb3c1;
+}
+
+.bg-C{
+    background-color: #99d8dd;
+}
+
+.bg-D{
+    background-color: #e1e8ec;
+}
+
+.bg-E{
+    background-color: #f3ba00;
+}
+
+.div-form{
+    padding: 5px;
+    background-color: #99d8dd;
+}
+
+.font-white{
+    color: white;
+}
+
+.btn-guardar{
+    color:#000;
+    background-color:#f3ba00;
+    border-color:#f3ba00
+}
+
+.logo{
+    max-width: 100px;
+    min-width: 50px;
+    padding: 5px;
+}
