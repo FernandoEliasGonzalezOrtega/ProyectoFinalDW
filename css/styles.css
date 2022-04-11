@@ -55,7 +55,7 @@
 
 .scroll-table{
     overflow: scroll;
-    height:400px;
+    height:75vh;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
