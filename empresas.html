@@ -1,4 +1,4 @@
-<!--Sitio para editar los datos de trabajadores-->
+<!--Sitio para visualizar los datos de empresas-->
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@
                 <!--Barra de busqueda-->
                 <form class="row py-3">
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="worksearch" placeholder="Ingresa el nombre del trabajador">
+                        <input type="text" class="form-control" id="worksearch" placeholder="Ingresa el nombre de la empresa">
                     </div>
                     <div class="col-md-2">
                         <button type="submit" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-search"></i>  Buscar</button>
@@ -47,9 +47,9 @@
                 </div>
                 <form>
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-12">
                             <!--Tabla de datos-->
-                            <div class="scroll-table bg-D">
+                            <div class="scroll-table my-3 bg-D">
                                 <!--Fila de tabla-->
                                 <div class="row border border-dark border-2">
                                     <div class="col-md-3 align-middle">
@@ -168,19 +168,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 m-auto">
-                            <nav class="bg-yellow p-3">
-                                <ul class="nav justify-content-center">
-                                    <li class="nav-item m-3">
-                                        <button type="submit" class="btn btn-primary btn-guardar" href="#"><i class="bi bi-pencil-square"></i>  Modificar</button>
-                                    </li>
-                                    <li class="nav-item m-3">
-                                        <button type="submit" class="btn btn-primary btn-guardar" href="#"><i class="bi bi-eraser-fill"></i>  Eliminar</button>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </nav>
-                        </div>
                     </div>
                 </form>
             </div>
@@ -195,7 +182,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="#">Historial de acceso</a>
+                        <a href="historial.html">Historial de acceso</a>
                     </div>
                 </div>
             </footer>
