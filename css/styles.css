@@ -41,6 +41,12 @@
     color: white;
 }
 
+.font-bold{
+    font-weight: bold;
+    text-align: right;
+    font-size: 20pt;
+}
+
 .btn-guardar{
     color:#000;
     background-color:#f3ba00;
