@@ -1,0 +1,209 @@
+<!--Sitio para editar los datos de trabajadores-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trabajadores</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md bg-A align-middle font-white">
+            <div class="container-fluid">
+                    <img src="./logos/logo-blanco-nombre.png" alt="logo" width="5%" class="d-inline-block align-text-top">
+                    <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
+                    <i class="bi bi-box-arrow-right fs-1" alt="login" class="d-inline-block align-text-top"></i>       
+            </div>
+        </nav>
+        <div class="container-fluid bg-B">
+            <!--Barra de busqueda-->
+            <form class="row py-3">
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="worksearch" placeholder="Ingresa el nombre del trabajador">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-search"></i>  Buscar</button>
+                </div>
+            </form>
+            <!--Switch de vistas-->
+            <div class="row pb-3">
+                <div class="col-md-3"></div>
+                <form class="col-md-6">
+                    <div class="row">
+                        <div class="col">
+                            <span>Trabajadores</span>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <span>Empresas</span>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-plus-square"></i>     Nuevo Trabajador</button>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-9">
+                        <!--Tabla de datos-->
+                        <div class="scroll-table bg-D">
+                            <!--Fila de tabla-->
+                            <div class="row border border-dark border-2">
+                                <div class="col-md-3 align-middle">
+                                    <img src="./logos/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row m-3">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
+                                                <label class="form-check-label" for="trabajador1">
+                                                    Tony Stark
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-3">
+                                        <div class="col-md-6">
+                                            1963
+                                        </div>
+                                        <div class="col-md-6">
+                                            001
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 align-middle">
+                                    <button type="submit" class="btn btn-primary btn-guardar m-4" href="#">Ver Datos</button>
+                                </div>
+                            </div>
+                            <!--Fila de tabla-->
+                            <div class="row border border-dark border-2">
+                                <div class="col-md-3 align-middle">
+                                    <img src="./logos/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row m-3">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
+                                                <label class="form-check-label" for="trabajador1">
+                                                    Steve Rogers
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-3">
+                                        <div class="col-md-6">
+                                            1936
+                                        </div>
+                                        <div class="col-md-6">
+                                            002
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 align-middle">
+                                    <button type="submit" class="btn btn-primary btn-guardar m-4" href="#">Ver Datos</button>
+                                </div>
+                            </div>
+                            <!--Fila de tabla-->
+                            <div class="row border border-dark border-2">
+                                <div class="col-md-3 align-middle">
+                                    <img src="./logos/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row m-3">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
+                                                <label class="form-check-label" for="trabajador1">
+                                                    Matt Murdock
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-3">
+                                        <div class="col-md-6">
+                                            1978
+                                        </div>
+                                        <div class="col-md-6">
+                                            003
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 align-middle">
+                                    <button type="submit" class="btn btn-primary btn-guardar m-4" href="#">Ver Datos</button>
+                                </div>
+                            </div>
+                            <!--Fila de tabla-->
+                            <div class="row border border-dark border-2">
+                                <div class="col-md-3 align-middle">
+                                    <img src="./logos/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row m-3">
+                                        <div class="col-md-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
+                                                <label class="form-check-label" for="trabajador1">
+                                                    Peter Parker
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-3">
+                                        <div class="col-md-6">
+                                            1996
+                                        </div>
+                                        <div class="col-md-6">
+                                            004
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 align-middle">
+                                    <button type="submit" class="btn btn-primary btn-guardar m-4" href="#">Ver Datos</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 m-auto">
+                        <nav class="bg-yellow p-3">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item m-3">
+                                    <button type="submit" class="btn btn-primary btn-guardar" href="#"><i class="bi bi-person-badge"></i>  Generar PDF</button>
+                                </li>
+                                <li class="nav-item m-3">
+                                    <button type="submit" class="btn btn-primary btn-guardar" href="#"><i class="bi bi-pencil-square"></i>  Modificar</button>
+                                </li>
+                                <li class="nav-item m-3">
+                                    <button type="submit" class="btn btn-primary btn-guardar" href="#"><i class="bi bi-eraser-fill"></i>  Eliminar</button>
+                                </li>
+                                <br>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="bg-A text-center fs-6 sticky-bottom top-bottom">
+            <div class="row">
+                <div class="col-md-12">Todos los derechos reservados.</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">Consorcio Vengadores S. A. de C. V.</div>
+                <div class="col-md-4">Departamento de Recursos Humanos</div>
+                <div class="col-md-4">Tel: 222-123-1234</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#">Historial de acceso</a>
+                </div>
+            </div>
+        </footer>        
+    </body>
+</html>
