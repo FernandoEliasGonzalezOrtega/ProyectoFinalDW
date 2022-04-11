@@ -3,22 +3,39 @@
     <head>
         <title>Datos Personales</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     </head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-info">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                </a> 
-                <p class="fs-3"><b>Consorcio Vengadores S. A. de C. V.</b></p>                            
+    <body class="bg-C">
+        <nav class="navbar navbar-default navbar-static-top bg-A">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <div class="nav navbar-nav navbar-left">
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/logo-blanco-nombre.png" alt="logo" class="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="nav navbar-nav navbar-center">
+                    <p class="fs-3 m-auto font-white"><b>Consorcio Vengadores S. A. de C. V.</b></p>
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <i class="bi bi-box-arrow-right fs-1" alt="login" class="d-inline-block align-text-top"></i>
+                </div>      
             </div>
         </nav>
-        <div class="col-md-6">
+        
+        <div class="container bg-C div-form">
             <form>
-                <h1>Expediente</h1>
-                <h3>Datos Personales</h3>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12">
+                        <h1>Datos Personales</h1>
+                    </div>
+                </div>
+                
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre(s)</label>
@@ -45,14 +62,14 @@
                     <div class="col-md-2">
                         <label>Género</label>
                         <select class="form-control" required>
-                          <option selected>Seleccionar...</option>
-                          <option>Estado 1</option>
-                          <option>Estado 2</option>
-                          <option>Estado 3</option>
+                            <option selected>Seleccionar...</option>
+                            <option>Género 1</option>
+                            <option>Género 2</option>
+                            <option>Género 3</option>
                         </select>
                     </div>
                 </div>
-                <H3>Dirección</H3>
+                <h4>Dirección</h4>
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Calle</label>
@@ -81,18 +98,18 @@
                     <div class="form-group col-md-4">
                         <label>Estado</label>
                         <select class="form-control" required>
-                          <option selected>Seleccionar...</option>
-                          <option>Estado 1</option>
-                          <option>Estado 2</option>
-                          <option>Estado 3</option>
+                            <option selected>Seleccionar...</option>
+                            <option>Estado 1</option>
+                            <option>Estado 2</option>
+                            <option>Estado 3</option>
                         </select>
-                      </div>
-                      <div class="form-group col-md-2">
+                        </div>
+                        <div class="form-group col-md-2">
                         <label>C. P.</label>
                         <input type="text" class="form-control" placeholder="Código Postal" required>
-                      </div> 
+                        </div> 
                 </div>
-                <h3>Contacto</h3>
+                <h4>Contacto</h4>
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
@@ -119,12 +136,32 @@
                         <input type="text" class="form-control" placeholder="Teléfono de Emergencia" required>
                     </div>
                 </div>
+                <label>   </label>
                 <div class="row justify-content-md-center">
-                    <div class="col-md-12 justify-content-md-center">
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    <div class="d-grid gap-2 col-4 mx-auto">
+                        <button type="button" class="btn btn-guardar btn-lg">Guardar</button>
                     </div>
                 </div>
+                
             </form>
         </div>
+        <footer class="bg-A text-center fs-6 sticky-bottom font-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">Todos los derechos reservados.</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">Consorcio Vengadores S. A. de C. V.</div>
+                    <div class="col-md-4">Departamento de Recursos Humanos</div>
+                    <div class="col-md-4">Tel: 222-123-1234</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#">Historial de acceso</a>
+                    </div>
+                </div>
+            </div>
+        </footer>        
     </body>
+    
 </html>
