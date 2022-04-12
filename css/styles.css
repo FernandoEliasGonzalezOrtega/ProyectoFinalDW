@@ -75,3 +75,16 @@
     width: 95%;
     border: 1px solid black;
 }
+
+.history {
+  border: 2px solid black;
+  margin: 20px auto 0 auto;
+  background-color: #f3ba00;
+}
+
+.history-t {
+  margin: 10px auto 20px auto;
+  border: 2px solid black;
+  background-color: #e1e8ec;
+  padding: 2rem;
+}
