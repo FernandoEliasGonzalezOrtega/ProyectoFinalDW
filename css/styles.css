@@ -78,14 +78,54 @@
 }
 
 .history {
-  border: 2px solid black;
-  margin: 20px auto 0 auto;
   background-color: #f3ba00;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px auto 0 auto;
 }
 
 .history-t {
-  margin: 10px auto 20px auto;
-  border: 2px solid black;
   background-color: #e1e8ec;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px auto 20px auto;
   padding: 2rem;
+}
+
+.expediente-1 {
+  background-color: #f3ba00;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px auto 0 auto;
+}
+
+.expediente-2 {
+  background-color: #e1e8ec;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 auto 10px auto;
+  padding: 1.2rem 2.5rem 1.5rem 2.5rem;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.campo {
+  font-weight: bold;
+}
+
+.info {
+  background-color: #5cb3c1;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem;
+}
+
+.info-2 {
+  background-color: #f3ba00;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0.5rem;
 }
