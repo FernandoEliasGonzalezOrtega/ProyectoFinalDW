@@ -66,15 +66,12 @@
   padding: 5px;
 }
 
-.scroll-table{
-    overflow: scroll;
-    height:75vh;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    border: 1px solid black;
-    border-radius: 10px;
-}
+/*footer{
+  position:sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}*/
 
 .history {
   background-color: #f3ba00;
@@ -127,6 +124,13 @@
   border-radius: 5px;
   border: 1px solid black;
   padding: 0.5rem;
+}
+
+
+.table-scroll{
+  height: 100vh;
+  overflow-y: scroll;
+  border-radius: 10px;
 }
 
 h1{
