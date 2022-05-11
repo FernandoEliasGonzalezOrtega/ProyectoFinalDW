@@ -18,26 +18,24 @@
             </div>
         </nav>
         
-        <div class="form-group login container">
-            <h1>Iniciar Sesión</h1>
-            <form>
-                <label>Usuario</label> 
-                <input type="email" name="user" id="user" class="form-control"><br>
-                <label>Contraseña:</label> 
-                <input type="password" name="password"  id="password" class="form-control"><br><br>
-            </form>
-            <div class="d-grid gap-2 col-2 mx-auto">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
-            <label> </label>
-            <div class="row justify-content-md-center">
-                <div class="d-grid gap-2 col-4 mx-auto">
-                    <button type="button" class="btn btn-guardar btn-lg">Iniciar Sesión</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class=" col-md-6 login">
+                    <form method="post" class="form-group">
+                        <h1>Iniciar Sesión</h1> 
+                        <label>Usuario</label> 
+                        <input type="email" name="user" id="user" placeholder="Ingresa tu Usuario" class="form-control"><br>
+                        <label>Contraseña:</label> 
+                        <input type="password" name="password"  id="password" placeholder="Ingresa tu Contraseña" class="form-control"><br>
+                        <a href="#" class="d-grid gap-2 col-6 mx-auto">¿Olvidaste tu contraseña?</a><br>
+                        <input type="submit" class="btn btn-guardar btn-lg d-grid gap-2 col-5 mx-auto" value="Iniciar Sesión">
+                    </form>
                 </div>
+                <div class="col-md-3"></div>
             </div>
-            
         </div>
-
+        
         <footer class="bg-A text-center fs-6 sticky-bottom font-white">
             <div class="container">
                 <div class="row">
