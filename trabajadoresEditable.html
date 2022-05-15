@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <script src="./js/script.js"></script>
     </head>
     <body class="bg-C">
         <nav class="navbar navbar-default bg-A font-white">
@@ -23,7 +24,7 @@
                     <input type="text" class="form-control" id="worksearch" placeholder="Ingresa el nombre del trabajador">
                 </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-search"></i>  Buscar</button>
+                    <button type="button" class="btn btn-primary mb-3 btn-guardar" onclick={actualizarTabla()}><i class="bi bi-search"></i>  Buscar</button>
                 </div>
             </form>
             <!--Switch de vistas-->
@@ -52,123 +53,8 @@
                 <div class="row">
                     <div class="col-md-9">
                         <!--Tabla de datos-->
-                        <div class="container table-scroll my-3 bg-D" tabindex="0">
-                            <!--Fila de tabla-->
-                            <div class="row border-top border-bottom border-dark border-2">
-                                <div class="col-md-3 align-middle">
-                                    <img src="./img/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row m-3">
-                                        <div class="col-md-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
-                                                <label class="form-check-label" for="trabajador1">
-                                                    Tony Stark
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row m-3">
-                                        <div class="col-md-6">
-                                            1963
-                                        </div>
-                                        <div class="col-md-6">
-                                            001
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 align-middle">
-                                    <a class="btn btn-primary btn-guardar m-4" href="./expediente.html">Ver Datos</a>
-                                </div>
-                            </div>
-                            <!--Fila de tabla-->
-                            <div class="row border-top border-bottom border-dark border-2">
-                                <div class="col-md-3 align-middle">
-                                    <img src="./img/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row m-3">
-                                        <div class="col-md-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
-                                                <label class="form-check-label" for="trabajador1">
-                                                    Steve Rogers
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row m-3">
-                                        <div class="col-md-6">
-                                            1936
-                                        </div>
-                                        <div class="col-md-6">
-                                            002
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 align-middle">
-                                    <a class="btn btn-primary btn-guardar m-4" href="./expediente.html">Ver Datos</a>
-                                </div>
-                            </div>
-                            <!--Fila de tabla-->
-                            <div class="row border-top border-bottom border-dark border-2">
-                                <div class="col-md-3 align-middle">
-                                    <img src="./img/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row m-3">
-                                        <div class="col-md-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
-                                                <label class="form-check-label" for="trabajador1">
-                                                    Matt Murdock
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row m-3">
-                                        <div class="col-md-6">
-                                            1978
-                                        </div>
-                                        <div class="col-md-6">
-                                            003
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 align-middle">
-                                    <a class="btn btn-primary btn-guardar m-4" href="./expediente.html">Ver Datos</a>
-                                </div>
-                            </div>
-                            <!--Fila de tabla-->
-                            <div class="row border-top border-bottom border-dark border-2">
-                                <div class="col-md-3 align-middle">
-                                    <img src="./img/person-circle.svg" alt="prof-pic" height="100px" class="p-1 mx-5">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row m-3">
-                                        <div class="col-md-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="trabajadores" id="trabajador1">
-                                                <label class="form-check-label" for="trabajador1">
-                                                    Peter Parker
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row m-3">
-                                        <div class="col-md-6">
-                                            1996
-                                        </div>
-                                        <div class="col-md-6">
-                                            004
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 align-middle">
-                                    <a class="btn btn-primary btn-guardar m-4" href="./expediente.html">Ver Datos</a>
-                                </div>
-                            </div>
+                        <div class="container table-scroll my-3 bg-D" tabindex="0" id="tablaTrabajadores">
+                            Realiza tu búsqueda
                         </div>
                     </div>
                     <div class="col-md-3 m-auto">
