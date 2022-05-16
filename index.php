@@ -1,32 +1,26 @@
+<?php require 'bd.php'?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Login</title>
+        <title>Ingresar</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
     </head>
     <body class="bg-C">
-        <nav class="navbar navbar-default bg-A font-white">
-            <div class="container">
-                    <img src="./img/logo-blanco-nombre.png" alt="logo"  class=" logo d-inline-block align-text-top">
-                    <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>       
-            </div>
-        </nav>
-        
+        <?php require 'partials/header.php' ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class=" col-md-6 login">
-                    <form method="post" class="form-group">
-                        <h1>Iniciar Sesión</h1> 
-                        <label>Usuario</label> 
-                        <input type="email" name="user" id="user" placeholder="Ingresa tu Usuario" class="form-control"><br>
-                        <label>Contraseña:</label> 
+                    <form action="index.php" method="post" class="form-group">
+                        <h1>Iniciar Sesión</h1>
+                        <label>Usuario</label>
+                        <input type="text" name="user" id="user" placeholder="Ingresa tu Usuario" class="form-control"><br>
+                        <label>Contraseña:</label>
                         <input type="password" name="password"  id="password" placeholder="Ingresa tu Contraseña" class="form-control"><br>
                         <input type="submit" class="btn btn-guardar btn-lg d-grid gap-2 col-5 mx-auto" value="Iniciar Sesión">
                     </form>
@@ -34,7 +28,7 @@
                 <div class="col-md-3"></div>
             </div>
         </div>
-        
+
         <footer class="bg-A text-center fs-6 sticky-bottom font-white">
             <div class="container">
                 <div class="row">
@@ -51,7 +45,7 @@
                     </div>
                 </div>
             </div>
-        </footer>        
+        </footer>
     </body>
-    
+
 </html>
