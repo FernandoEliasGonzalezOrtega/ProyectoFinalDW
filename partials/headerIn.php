@@ -15,7 +15,7 @@
       </a>
         <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
         <form method="POST">
-          <button type="submit" name="btnLogout"><i class="bi bi-box-arrow-right fs-1" alt="Logout" class="d-inline-block align-text-top"></i></button>  
+          <button type="submit" name="btnLogout" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-box-arrow-right fs-1" alt="Logout" class="d-inline-block align-text-top"></i></button>  
         </form>
         
     </div>
