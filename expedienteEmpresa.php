@@ -40,14 +40,12 @@
         <!-- Giro empresarial -->
         <div class="col-sm-6"><p class="campo">Giro empresarial:</p></div>
         <div class="col-sm-6"><p id="giroEmpresarial"></p></div>
-        <!-- Fecha de nacimiento -->
-        <div class="col-sm-6"><p class="campo">Fecha de nacimiento:</p></div>
-        <div class="col-sm-6"><p id="fecha"></p></div>
-        <!-- CURP -->
-        <div class="col-sm-6"><p class="campo">CURP:</p></div>
-        <div class="col-sm-6">
-          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="curp">Ver archivo</a>
-        </div>
+        <!-- Regimen Fiscal -->
+        <div class="col-sm-6"><p class="campo">Regimen fiscal:</p></div>
+        <div class="col-sm-6"><p id="regimenFiscal"></p></div>
+        <!-- Edificio -->
+        <div class="col-sm-6"><p class="campo">Edificio:</p></div>
+        <div class="col-sm-6"><p id="edificio"></p></div>
         <!-- Teléfono celular -->
         <div class="col-sm-6"><p class="campo">Teléfono celular:</p></div>
         <div class="col-sm-6"><p id="telefonoCelular"></p></div>
