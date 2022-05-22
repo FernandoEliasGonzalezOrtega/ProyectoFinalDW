@@ -5,6 +5,10 @@
     header('Location: index.php');
     exit();
   }
+
+  require './partials/historial.php';
+  $des = "MENÚ EMPRESAS.";
+  nvo($des);
  ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +22,6 @@
     <body class="bg-C" onload={actualizarTablaEmpresas()}>
         <!--Header-->
         <?php require 'partials/headerIn.php'; ?>
-
         <div class="container">
             <!--Barra de busqueda-->
             <form class="row py-3">

@@ -14,7 +14,7 @@
             <div class='container'>
                     <img src='./assets/img/logo-blanco-nombre.png' alt='logo' width='5%' class='d-inline-block align-text-top'>
                     <p class='fs-3 m-auto'><b>Consorcio Vengadores S. A. de C. V.</b></p>
-                    <i class='bi bi-box-arrow-right fs-1' alt='login' class='d-inline-block align-text-top'></i>       
+                    <i class='bi bi-box-arrow-right fs-1' alt='login' class='d-inline-block align-text-top'></i>
             </div>
         </nav>
         <div class='container bg-C'>
