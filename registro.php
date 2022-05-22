@@ -1,8 +1,8 @@
 <?php
-  session_start();
+/*  session_start();
 if (!isset($_SESSION['user_id'])) {
   header('Location: ./index.php');
-}
+}*/
   require 'bd.php';
   $message = '';
   if(isset($_POST['btnRegistrar'])){

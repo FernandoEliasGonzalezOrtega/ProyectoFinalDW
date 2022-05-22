@@ -1,9 +1,9 @@
 <?php
-  session_start();
+/*  session_start();
 
   if (isset($_SESSION['user_id'])) {
     header('Location: ./empresasEdit.php');
-  }
+  } */
   require 'bd.php';
   if(isset($_POST['btnInicio'])){
     $usuario = $_POST['user'];
