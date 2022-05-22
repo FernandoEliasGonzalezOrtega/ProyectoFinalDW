@@ -96,9 +96,9 @@ function actualizarExpedienteTrabajador() {
         "puesto":"Vengador",
         "numeroContrato":1,
         "objetoContrato":"Actividades Militares",
-        "rfc":"www.facebook.com",
-        "nss":"www.instagram.com",
-        "estadoSalud":"excelente",
+        "rfc":"http://www.facebook.com",
+        "nss":"http://www.instagram.com",
+        "estadoSalud":"Excelente",
         "observacionesMedicas":"Ninguna",
         "empresa":"S.H.I.E.L.D."
     };
@@ -106,20 +106,30 @@ function actualizarExpedienteTrabajador() {
     document.getElementById("numeroTrabajador").innerHTML=trabajador.idTrabajador;
     document.getElementById("nombre").innerHTML=trabajador.nombre;
     document.getElementById("apellidoPaterno").innerHTML=trabajador.apellidoPaterno;
+    document.getElementById("apellidoMaterno").innerHTML=trabajador.apellidoMaterno;
     document.getElementById("fecha").innerHTML=trabajador.fecha;
     document.getElementById("curp").setAttribute("href",trabajador.curp);
-    document.getElementById("apellidoMaterno").innerHTML=trabajador.apellidoMaterno;
-    /*document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;
-    document.getElementById("").innerHTML=trabajador.;*/
+    document.getElementById("telefonoCelular").innerHTML=trabajador.telefonoCelular;
+    document.getElementById("telefonoCasa").innerHTML=trabajador.telefonoCasa;
+    document.getElementById("email").innerHTML=trabajador.email;
+    document.getElementById("genero").innerHTML=trabajador.genero;
+    document.getElementById("direccion").innerHTML=trabajador.direccion;
+    document.getElementById("numeroExterior").innerHTML=trabajador.numeroExterior;
+    document.getElementById("numeroInterior").innerHTML=trabajador.numeroInterior;
+    document.getElementById("colonia").innerHTML=trabajador.colonia;
+    document.getElementById("municipio").innerHTML=trabajador.municipio;
+    document.getElementById("estado").innerHTML=trabajador.estado;
+    document.getElementById("codigoPostal").innerHTML=trabajador.codigoPostal;
+    document.getElementById("contactoEmergencia").innerHTML=trabajador.contactoEmergencia;
+    document.getElementById("telefonoEmergencia").innerHTML=trabajador.telefonoEmergencia;
+    document.getElementById("sueldo").innerHTML=trabajador.sueldo;
+    document.getElementById("fechaIngreso").innerHTML=trabajador.fechaIngreso;
+    document.getElementById("puesto").innerHTML=trabajador.puesto;
+    document.getElementById("numeroContrato").innerHTML=trabajador.numeroContrato;
+    document.getElementById("objetoContrato").innerHTML=trabajador.objetoContrato;
+    document.getElementById("rfc").setAttribute("href",trabajador.rfc);
+    document.getElementById("nss").setAttribute("href",trabajador.nss);
+    document.getElementById("estadoSalud").innerHTML=trabajador.estadoSalud;
+    document.getElementById("observacionesMedicas").innerHTML=trabajador.observacionesMedicas;
+    document.getElementById("empresa").innerHTML=trabajador.empresa;
 }
