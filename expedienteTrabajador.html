@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <script src='./assets/js/script.js'></script>
   </head>
 
-  <body class="bg-C">
+  <body class="bg-C" onload={actualizarExpedienteTrabajador()}>
 
     <!-- Encabezado -->
     <header>
@@ -32,60 +33,60 @@
       <div class="row gy-3 expediente-2">
         <!-- No. de trabajador -->
         <div class="col-sm-6"><p class="campo">No. de trabajador:</p></div>
-        <div class="col-sm-6"><p id="numeroTrabajador">001</p></div>
+        <div class="col-sm-6"><p id="numeroTrabajador"></p></div>
         <!-- Nombre -->
         <div class="col-sm-6"><p class="campo">Nombre:</p></div>
-        <div class="col-sm-6"><p id="nombre">Tony</p></div>
+        <div class="col-sm-6"><p id="nombre"></p></div>
         <!-- Apellido paterno -->
         <div class="col-sm-6"><p class="campo">Apellido paterno:</p></div>
-        <div class="col-sm-6"><p id="apellidoPaterno">Stark</p></div>
+        <div class="col-sm-6"><p id="apellidoPaterno"></p></div>
         <!-- Apellido materno -->
         <div class="col-sm-6"><p class="campo">Apellido materno:</p></div>
-        <div class="col-sm-6"><p id="apellidoMaterno">Edward</p></div>
+        <div class="col-sm-6"><p id="apellidoMaterno"></p></div>
         <!-- Fecha de nacimiento -->
         <div class="col-sm-6"><p class="campo">Fecha de nacimiento:</p></div>
-        <div class="col-sm-6"><p id="fecha">29-mayo-1970</p></div>
+        <div class="col-sm-6"><p id="fecha"></p></div>
         <!-- CURP -->
         <div class="col-sm-6"><p class="campo">CURP:</p></div>
         <div class="col-sm-6">
-          <a class="btn" class="info" value="Ver archivo" id="curp">
+          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="curp">Ver archivo</a>
         </div>
         <!-- Teléfono celular -->
         <div class="col-sm-6"><p class="campo">Teléfono celular:</p></div>
-        <div class="col-sm-6"><p>222-542-3256</p></div>
+        <div class="col-sm-6"><p id="telefonoCelular"></p></div>
         <!-- Teléfono de casa -->
         <div class="col-sm-6"><p class="campo">Teléfono de casa:</p></div>
-        <div class="col-sm-6"><p>222-387-4177</p></div>
+        <div class="col-sm-6"><p id="telefonoCasa"></p></div>
         <!-- Correo electrónico -->
         <div class="col-sm-6"><p class="campo">Correo:</p></div>
-        <div class="col-sm-6"><p>iron-man@shield.gov</p></div>
+        <div class="col-sm-6"><p id="email"></p></div>
         <!-- Género -->
         <div class="col-sm-6"><p class="campo">Género:</p></div>
-        <div class="col-sm-6"><p>Masculino</p></div>
+        <div class="col-sm-6"><p id="genero"></p></div>
         <!-- Dirección -->
         <div class="col-sm-6"><p class="campo">Dirección:</p></div>
-        <div class="col-sm-6"><p>Point Dume</p></div>
+        <div class="col-sm-6"><p id="direccion"></p></div>
         <!-- Número exterior e interior -->
         <div class="col-sm-3"><p class="campo">Número exterior:</p></div>
-        <div class="col-sm-3"><p>1</p></div>
+        <div class="col-sm-3"><p id="numeroExterior"></p></div>
         <div class="col-sm-3"><p class="campo">Número interior:</p></div>
-        <div class="col-sm-3"><p>N/A</p></div>
+        <div class="col-sm-3"><p id="numeroInterior"></p></div>
         <!-- Colonia y municipio -->
         <div class="col-sm-3"><p class="campo">Colonia:</p></div>
-        <div class="col-sm-3"><p>Malibu</p></div>
+        <div class="col-sm-3"><p id="colonia"></p></div>
         <div class="col-sm-3"><p class="campo">Municipio:</p></div>
-        <div class="col-sm-3"><p>Alpine</p></div>
+        <div class="col-sm-3"><p id="municipio"></p></div>
         <!-- Estado y CP -->
         <div class="col-sm-3"><p class="campo">Estado:</p></div>
-        <div class="col-sm-3"><p>California</p></div>
+        <div class="col-sm-3"><p id="estado"></p></div>
         <div class="col-sm-3"><p class="campo">Código postal:</p></div>
-        <div class="col-sm-3"><p>90036</p></div>
+        <div class="col-sm-3"><p id="codigoPostal"></p></div>
         <!-- Contacto de emergencia -->
         <div class="col-sm-6"><p class="campo">Contacto de emergencia:</p></div>
-        <div class="col-sm-6"><p>Pepper Pots</p></div>
+        <div class="col-sm-6"><p id="contactoEmergencia"></p></div>
         <!-- Teléfono de emergencia -->
         <div class="col-sm-6"><p class="campo">Teléfono de emergencia:</p></div>
-        <div class="col-sm-6"><p>222-390-7712</p></div>
+        <div class="col-sm-6"><p id="telefonoEmergencia"></p></div>
       </div>
     </div>
 
@@ -101,47 +102,43 @@
       <div class="row gy-3 expediente-2">
         <!-- Sueldo -->
         <div class="col-sm-6"><p class="campo">Sueldo:</p></div>
-        <div class="col-sm-6"><p>$2,500,000 USD</p></div>
+        <div class="col-sm-6"><p id="sueldo"></p></div>
         <!-- Fecha de ingreso -->
         <div class="col-sm-6"><p class="campo">Fecha de ingreso:</p></div>
-        <div class="col-sm-6"><p>20-diciembre-2014</p></div>
+        <div class="col-sm-6"><p id="fechaIngreso"></p></div>
         <!-- Puesto -->
         <div class="col-sm-6"><p class="campo">Puesto:</p></div>
-        <div class="col-sm-6"><p>Vengador</p></div>
+        <div class="col-sm-6"><p id="puesto"></p></div>
         <!-- No. de contrato -->
         <div class="col-sm-6"><p class="campo">Número de contrato:</p></div>
-        <div class="col-sm-6"><p>001</p></div>
+        <div class="col-sm-6"><p id="numeroContrato"></p></div>
         <!-- Objeto de contrato -->
         <div class="col-sm-6"><p class="campo">Objeto de contrato:</p></div>
-        <div class="col-sm-6"><p>Actividades militares</p></div>
+        <div class="col-sm-6"><p id="objetoContrato"></p></div>
         <!-- RFC -->
         <div class="col-sm-6"><p class="campo">RFC:</p></div>
         <div class="col-sm-6">
-          <form action="index.html" method="post">
-            <input type="button" class="info" name="button" value="Ver archivo">
-          </form>
+          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="rfc">Ver archivo</a>
         </div>
         <!-- Número de seguridad social -->
         <div class="col-sm-6"><p class="campo">NSS:</p></div>
         <div class="col-sm-6">
-          <form action="index.html" method="post">
-            <input type="button" class="info" name="button" value="Ver archivo">
-          </form>
+          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="nss">Ver archivo</a>
         </div>
         <!-- Estado de salud -->
         <div class="col-sm-6"><p class="campo">Estado de salud:</p></div>
-        <div class="col-sm-6"><p>Excelente</p></div>
+        <div class="col-sm-6"><p id="estadoSalud"></p></div>
         <!-- Observaciones médicas -->
         <div class="col-sm-6"><p class="campo">Observaciones médicas:</p></div>
-        <div class="col-sm-6"><p>Ninguna</p></div>
+        <div class="col-sm-6"><p id="observacionesMedicas"></p></div>
         <!-- Empresa -->
         <div class="col-sm-6"><p class="campo">Empresa:</p></div>
-        <div class="col-sm-6"><p>S.H.I.E.L.D.</p></div>
+        <div class="col-sm-6"><p id="empresa"></p></div>
         <!-- Datos de la empresa -->
         <div class="col-sm-5"></div>
         <div class="col-sm-4">
           <form action="index.html" method="post">
-            <input type="button" class="info-2" name="button" value="Ver datos de la empresa">
+            <a type="button" class='btn btn-primary mb-3 btn-guardar' name="button">Ver datos de la empresa</a>
           </form>
         </div>
       </div>

@@ -77,7 +77,7 @@ function actualizarExpedienteTrabajador() {
         "apellidoPaterno":"Edward",
         "apellidoMaterno":"Stark",
         "fecha":"29-mayo-1970",
-        "curp":"www.google.com.mx",
+        "curp":"http://www.google.com.mx",
         "telefonoCelular":"222-542-3256",
         "telefonoCasa":"222-387-4177",
         "email":"iron-man@shield.gov",
@@ -103,5 +103,23 @@ function actualizarExpedienteTrabajador() {
         "empresa":"S.H.I.E.L.D."
     };
     console.log(trabajador);
-    
+    document.getElementById("numeroTrabajador").innerHTML=trabajador.idTrabajador;
+    document.getElementById("nombre").innerHTML=trabajador.nombre;
+    document.getElementById("apellidoPaterno").innerHTML=trabajador.apellidoPaterno;
+    document.getElementById("fecha").innerHTML=trabajador.fecha;
+    document.getElementById("curp").setAttribute("href",trabajador.curp);
+    document.getElementById("apellidoMaterno").innerHTML=trabajador.apellidoMaterno;
+    /*document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;
+    document.getElementById("").innerHTML=trabajador.;*/
 }

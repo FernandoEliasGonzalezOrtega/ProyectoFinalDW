@@ -5,9 +5,6 @@
         <img src="assets/img/logo-blanco-nombre.png" alt="logo" width="15%" class="d-inline-block align-text-top">
       </a>
         <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
-        <form method="post">
-          <button type="submit" name="btnLogout" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-box-arrow-right fs-1" alt="Logout" class="d-inline-block align-text-top"></i></button>
-        </form>
-        <a href="./logout.php">CERRAR</a>
+        <a class="btn btn-primary mb-3 btn-guardar" href="./logout.php"><i class="bi bi-box-arrow-right fs-1" alt="Logout" class="d-inline-block align-text-top"></i></a>
     </div>
 </nav>
