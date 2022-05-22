@@ -14,6 +14,9 @@
         <img src="assets/img/logo-blanco-nombre.png" alt="logo" width="15%" class="d-inline-block align-text-top">
       </a>
         <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
-        <i class="bi bi-box-arrow-right fs-1" alt="Logout" class="d-inline-block align-text-top"></i>
+        <form method="POST">
+          <button type="submit" name="btnLogout"><i class="bi bi-box-arrow-right fs-1" alt="Logout" class="d-inline-block align-text-top"></i></button>  
+        </form>
+        
     </div>
 </nav>
