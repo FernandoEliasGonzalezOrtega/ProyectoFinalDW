@@ -14,6 +14,11 @@
       if(mysqli_num_rows($q) != 0 && strcmp($pass, $res['password'])==0){
         $_SESSION['user_id'] = $usuario;
         header('Location: empresasEdit.php');
+        $fecha = date('Y-m-d H:i:s');
+        $des = "INICIÓ SESIÓN.";
+        $sql = "INSERT INTO Historial (usuario,fecha,descripcion) VALUES ('$usuario','$fecha','$des')";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
         exit();
       }else{
         $message = 'Usuario o contraseña incorrectas.';
