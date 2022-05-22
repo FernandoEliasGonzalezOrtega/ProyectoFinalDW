@@ -1,9 +1,9 @@
 <?php
-/*  session_start();
-
+  session_start();
   if (isset($_SESSION['user_id'])) {
-    header('Location: ./empresasEdit.php');
-  } */
+    header('Location: empresasEdit.php');
+    exit;
+  }
   require 'bd.php';
   if(isset($_POST['btnInicio'])){
     $usuario = $_POST['user'];
@@ -12,8 +12,9 @@
       $q = $conn->query("SELECT password FROM Login WHERE usuario = '$usuario'");
       $res = $q->fetch_assoc();
       if(mysqli_num_rows($q) != 0 && strcmp($pass, $res['password'])==0){
-        $_SESSION['user_id'] = $res['usuario'];
-        header('Location: ./empresasEdit.php');
+        $_SESSION['user_id'] = $usuario;
+        header('Location: empresasEdit.php');
+        exit();
       }else{
         $message = 'Usuario o contraseña incorrectas.';
       }

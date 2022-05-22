@@ -1,8 +1,9 @@
 <?php
 /*  session_start();
-if (!isset($_SESSION['user_id'])) {
-  header('Location: ./index.php');
-}*/
+  if (!isset($_SESSION['user_id'])) {
+    header('Location: ./index.php');
+    exit();
+  } */
   require 'bd.php';
   $message = '';
   if(isset($_POST['btnRegistrar'])){
@@ -17,8 +18,8 @@ if (!isset($_SESSION['user_id'])) {
           $stmt = $conn->prepare($sql);
           if ($stmt->execute()) {
             $message = 'Usuario creado correctamente.';
-            header('Location: index.php');
-            exit;
+            header('Location: ./index.php');
+            exit();
           } else {
             $message = 'Ocurrió un error al crear el usuario. Intente nuevamente.';
           }
