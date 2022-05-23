@@ -142,6 +142,9 @@
           </form>
         </div>
       </div>
+      <div class="row py-3">
+        <a href='./trabajadoresEdit.php' class="btn btn-guardar btn-lg">Volver</a>
+      </div>
     </div>
 
     <!-- Pie de página -->

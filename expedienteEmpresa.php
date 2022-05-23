@@ -46,18 +46,12 @@
         <!-- Edificio -->
         <div class="col-sm-6"><p class="campo">Edificio:</p></div>
         <div class="col-sm-6"><p id="edificio"></p></div>
-        <!-- Teléfono celular -->
-        <div class="col-sm-6"><p class="campo">Teléfono celular:</p></div>
-        <div class="col-sm-6"><p id="telefonoCelular"></p></div>
-        <!-- Teléfono de casa -->
-        <div class="col-sm-6"><p class="campo">Teléfono de casa:</p></div>
-        <div class="col-sm-6"><p id="telefonoCasa"></p></div>
-        <!-- Correo electrónico -->
-        <div class="col-sm-6"><p class="campo">Correo:</p></div>
-        <div class="col-sm-6"><p id="email"></p></div>
-        <!-- Género -->
-        <div class="col-sm-6"><p class="campo">Género:</p></div>
-        <div class="col-sm-6"><p id="genero"></p></div>
+      </div>
+    <!-- Título - domicilio fiscal -->
+          <div class="row expediente-1">
+            <div class="col-sm-12 titulo"><h1>Domicilio fiscal</h1></div>
+          </div>
+          <div class="row gy-3 expediente-2">
         <!-- Dirección -->
         <div class="col-sm-6"><p class="campo">Dirección:</p></div>
         <div class="col-sm-6"><p id="direccion"></p></div>
@@ -82,62 +76,31 @@
         <!-- Teléfono de emergencia -->
         <div class="col-sm-6"><p class="campo">Teléfono de emergencia:</p></div>
         <div class="col-sm-6"><p id="telefonoEmergencia"></p></div>
-      </div>
     </div>
-
-    <!-- Título - datos laborales -->
-    <div class="container">
-      <div class="row expediente-1">
-        <div class="col-sm-12 titulo"><h1>Datos laborales</h1></div>
-      </div>
-    </div>
-
-    <!-- Datos laborales -->
-    <div class="container">
-      <div class="row gy-3 expediente-2">
-        <!-- Sueldo -->
-        <div class="col-sm-6"><p class="campo">Sueldo:</p></div>
-        <div class="col-sm-6"><p id="sueldo"></p></div>
-        <!-- Fecha de ingreso -->
-        <div class="col-sm-6"><p class="campo">Fecha de ingreso:</p></div>
-        <div class="col-sm-6"><p id="fechaIngreso"></p></div>
-        <!-- Puesto -->
-        <div class="col-sm-6"><p class="campo">Puesto:</p></div>
-        <div class="col-sm-6"><p id="puesto"></p></div>
-        <!-- No. de contrato -->
-        <div class="col-sm-6"><p class="campo">Número de contrato:</p></div>
-        <div class="col-sm-6"><p id="numeroContrato"></p></div>
-        <!-- Objeto de contrato -->
-        <div class="col-sm-6"><p class="campo">Objeto de contrato:</p></div>
-        <div class="col-sm-6"><p id="objetoContrato"></p></div>
-        <!-- RFC -->
+    <!-- Título - Contacto -->
+    <div class="row expediente-1">
+            <div class="col-sm-12 titulo"><h1>Contacto</h1></div>
+          </div>
+          <div class="row gy-3 expediente-2">
+        <!-- Email -->
+        <div class="col-sm-6"><p class="campo">Email:</p></div>
+        <div class="col-sm-6"><p id="email"></p></div>
+        <!-- Representante legal -->
+        <div class="col-sm-6"><p class="campo">Representante legal:</p></div>
+        <div class="col-sm-6"><p id="representanteLegal"></p></div>
+        <!-- Telefono -->
+        <div class="col-sm-6"><p class="campo">Telefono:</p></div>
+        <div class="col-sm-6"><p id="telefono"></p></div>
+        <!-- rfc -->
         <div class="col-sm-6"><p class="campo">RFC:</p></div>
-        <div class="col-sm-6">
-          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="rfc">Ver archivo</a>
-        </div>
-        <!-- Número de seguridad social -->
-        <div class="col-sm-6"><p class="campo">NSS:</p></div>
-        <div class="col-sm-6">
-          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="nss">Ver archivo</a>
-        </div>
-        <!-- Estado de salud -->
-        <div class="col-sm-6"><p class="campo">Estado de salud:</p></div>
-        <div class="col-sm-6"><p id="estadoSalud"></p></div>
-        <!-- Observaciones médicas -->
-        <div class="col-sm-6"><p class="campo">Observaciones médicas:</p></div>
-        <div class="col-sm-6"><p id="observacionesMedicas"></p></div>
-        <!-- Empresa -->
-        <div class="col-sm-6"><p class="campo">Empresa:</p></div>
-        <div class="col-sm-6"><p id="empresa"></p></div>
-        <!-- Datos de la empresa -->
-        <div class="col-sm-5"></div>
-        <div class="col-sm-4">
-          <form action="index.html" method="post">
-            <a type="button" class='btn btn-primary mb-3 btn-guardar' name="button">Ver datos de la empresa</a>
-          </form>
-        </div>
-      </div>
+        <div class="col-sm-6"><p id="rfc"></p></div>
+        
     </div>
+    <div class="row py-3">
+      <a href='./empresasEdit.php' class="btn btn-guardar btn-lg">Volver</a>
+    </div>
+  </div>
+
 
     <!-- Pie de página -->
     <footer class="bg-A text-center fs-6 sticky-bottom font-white">

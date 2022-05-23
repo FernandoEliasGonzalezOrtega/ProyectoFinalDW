@@ -38,15 +38,15 @@
                 <form class="col-md-6">
                     <div class="row">
                         <div class="col">
-                            <span>Trabajadores</span>
+                            <span>Empresas</span>
                         </div>
                         <div class="col">
                             <div class="form-check form-switch">
-                                <a href="./trabajadoresEdit.php"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked></a>
+                                <a href="./trabajadoresEdit.php"><input class="form-check-input" type="button" role="switch" id="flexSwitchCheckDefault" checked></a>
                             </div>
                         </div>
                         <div class="col">
-                            <span>Empresas</span>
+                            <span>Trabajadores</span>
                         </div>
                     </div>
                 </form>

@@ -117,7 +117,7 @@
                         <input type="text" class="form-control" placeholder="Representante Legal" id="legalRepresentativeBusiness" required>
                     </div>
                     <div class="col-md-6">
-                        <label>Teléfono de Emergencia</label>
+                        <label>Teléfono</label>
                         <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" id="emergencyPhoneBusiness" required>
                     </div>
                 </div>

@@ -37,7 +37,7 @@
                         </div>
                         <div class='col'>
                             <div class='form-check form-switch'>
-                                <a href='./empresasEdit.php'><input class='form-check-input' type='checkbox' role='switch' id='flexSwitchCheckDefault'></a>
+                                <a href='./empresasEdit.php' target="_self"><input class='form-check-input' type='button' role='switch' id='flexSwitchCheckDefault'></a>
                             </div>
                         </div>
                         <div class='col'>
