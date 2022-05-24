@@ -1,3 +1,14 @@
+<<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+  header('Location: index.php');
+  exit();
+}
+require './partials/historial.php';
+$des = "EXPEDIENTE EMPRESAS.";
+nvo($des);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -36,6 +47,7 @@
         <!-- Giro empresarial -->
         <div class="col-sm-6"><p class="campo">Giro empresarial:</p></div>
         <div class="col-sm-6"><p id="giroEmpresarial"></p></div>
+<<<<<<< Updated upstream
         <!-- Regimen Fiscal -->
         <div class="col-sm-6"><p class="campo">Regimen fiscal:</p></div>
         <div class="col-sm-6"><p id="regimenFiscal"></p></div>
@@ -48,6 +60,28 @@
             <div class="col-sm-12 titulo"><h1>Domicilio fiscal</h1></div>
           </div>
           <div class="row gy-3 expediente-2">
+=======
+        <!-- Fecha de nacimiento -->
+        <div class="col-sm-6"><p class="campo">Fecha de nacimiento:</p></div>
+        <div class="col-sm-6"><p id="fecha"></p></div>
+        <!-- CURP -->
+        <div class="col-sm-6"><p class="campo">CURP:</p></div>
+        <div class="col-sm-6">
+          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="curp">Ver archivo</a>
+        </div>
+        <!-- Teléfono celular -->
+        <div class="col-sm-6"><p class="campo">Teléfono celular:</p></div>
+        <div class="col-sm-6"><p id="telefonoCelular"></p></div>
+        <!-- Teléfono de casa -->
+        <div class="col-sm-6"><p class="campo">Teléfono de casa:</p></div>
+        <div class="col-sm-6"><p id="telefonoCasa"></p></div>
+        <!-- Correo electrónico -->
+        <div class="col-sm-6"><p class="campo">Correo:</p></div>
+        <div class="col-sm-6"><p id="email"></p></div>
+        <!-- Género -->
+        <div class="col-sm-6"><p class="campo">Género:</p></div>
+        <div class="col-sm-6"><p id="genero"></p></div>
+>>>>>>> Stashed changes
         <!-- Dirección -->
         <div class="col-sm-6"><p class="campo">Dirección:</p></div>
         <div class="col-sm-6"><p id="direccion"></p></div>
