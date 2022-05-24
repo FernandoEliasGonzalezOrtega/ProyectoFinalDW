@@ -5,32 +5,28 @@
     <meta charset="utf-8">
     <title>Expediente de empresa</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/styles.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-        <script src='./assets/js/script.js'></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src='./assets/js/script.js'></script>
   </head>
 
-  <body class="bg-C">
+  <body class="bg-C" onload={actualizarExpedienteEmpresa()}>
 
-    <!-- Encabezado -->
-    <header>
-      <nav class="navbar navbar-default bg-A font-white">
-        <div class="container">
-          <img src="./assets/img/logo-blanco-nombre.png" alt="logo" width="5%" class="d-inline-block align-text-top">
-          <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
-        </div>
-      </nav>
-    </header>
+    <!--Header-->
+    <?php require 'partials/headerIn.php'; ?>
 
     <!-- Expediente-título -->
     <div class="container">
       <div class="row expediente-1">
-        <div class="col-sm-12 titulo"><h1>Registro de empresa</h1></div>
+        <div class="col-sm-12 titulo"><h1>Empresa</h1></div>
       </div>
     </div>
     <!-- Expediente-datos -->
     <div class="container">
       <div class="row gy-3 expediente-2">
+        <!-- Id Empresa -->
+        <div class="col-sm-6"><p class="campo">Número de empresa:</p></div>
+        <div class="col-sm-6"><p id="idEmpresa"></p></div>
         <!-- Nombre -->
         <div class="col-sm-6"><p class="campo">Nombre / Razon Social:</p></div>
         <div class="col-sm-6"><p id="nombre"></p></div>
@@ -70,12 +66,6 @@
         <div class="col-sm-3"><p id="estado"></p></div>
         <div class="col-sm-3"><p class="campo">Código postal:</p></div>
         <div class="col-sm-3"><p id="codigoPostal"></p></div>
-        <!-- Contacto de emergencia -->
-        <div class="col-sm-6"><p class="campo">Contacto de emergencia:</p></div>
-        <div class="col-sm-6"><p id="contactoEmergencia"></p></div>
-        <!-- Teléfono de emergencia -->
-        <div class="col-sm-6"><p class="campo">Teléfono de emergencia:</p></div>
-        <div class="col-sm-6"><p id="telefonoEmergencia"></p></div>
     </div>
     <!-- Título - Contacto -->
     <div class="row expediente-1">
@@ -91,10 +81,11 @@
         <!-- Telefono -->
         <div class="col-sm-6"><p class="campo">Telefono:</p></div>
         <div class="col-sm-6"><p id="telefono"></p></div>
-        <!-- rfc -->
+        <!-- RFC -->
         <div class="col-sm-6"><p class="campo">RFC:</p></div>
-        <div class="col-sm-6"><p id="rfc"></p></div>
-        
+        <div class="col-sm-6">
+          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="rfc">Ver archivo</a>
+        </div>
     </div>
     <div class="row py-3">
       <a href='./empresasEdit.php' class="btn btn-guardar btn-lg">Volver</a>

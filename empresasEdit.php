@@ -10,6 +10,7 @@
   $des = "MENÚ EMPRESAS.";
   nvo($des);
  ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,7 +52,7 @@
                     </div>
                 </form>
                 <div class="col-md-3">
-                    <button type="submit" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-plus-square"></i>     Nueva Empresa</button>
+                <a type='submit' class='btn btn-primary mb-3 btn-guardar' href='./formularioEmpresa.php'><i class='bi bi-plus-square'></i>     Nueva Empresa</a>
                 </div>
             </div>
             <form>

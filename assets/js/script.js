@@ -29,8 +29,9 @@ function actualizarTablaTrabajadores() {
         }
     ];
     console.log(trabajadores);
+    console.log("todo bonito");
     for(let i=0; i<trabajadores.length; i++){
-        tabla.innerHTML += "<div class='row border-top border-bottom border-dark border-2'><div class='col-md-3 align-middle'><img src='"+trabajadores[i].fotoTrabajador+"' alt='prof-pic' height='100px' class='p-1 mx-5'></div><div class='col-md-3'><div class='row m-3'><div class='col-md-12'><label class='form-check-label' for='trabajador1'>"+trabajadores[i].nombreTrabajador+"</label></div></div><div class='row m-3'><div class='col-md-6'>"+trabajadores[i].fechaTrabajador+"</div><div class='col-md-6'>"+trabajadores[i].idTrabajador+"</div></div></div><div class='col-md-3 align-middle'><a class='btn btn-primary btn-guardar m-4' href='./expedienteTrabajador.html'>Ver Datos</a></div><div class='col-md-3 align-middle'><button class='btn btn-primary btn-guardar my-4 mx-2' href='#'><i class='bi bi-file-earmark-person'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' href='#'><i class='bi bi-pencil-square'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' href='#'><i class='bi bi-eraser-fill'></i></button></div></div>";
+        tabla.innerHTML += "<div class='row border-top border-bottom border-dark border-2'><div class='col-md-3 align-middle'><img src='"+trabajadores[i].fotoTrabajador+"' alt='prof-pic' height='100px' class='p-1 mx-5'></div><div class='col-md-3'><div class='row m-3'><div class='col-md-12'><label class='form-check-label' for='trabajador1'>"+trabajadores[i].nombreTrabajador+"</label></div></div><div class='row m-3'><div class='col-md-6'>"+trabajadores[i].fechaTrabajador+"</div><div class='col-md-6'>"+trabajadores[i].idTrabajador+"</div></div></div><div class='col-md-3 align-middle'><a class='btn btn-primary btn-guardar m-4' href='./expedienteTrabajador.php'>Ver Datos</a></div><div class='col-md-3 align-middle'><button class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-file-earmark-person'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-pencil-square'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-eraser-fill'></i></button></div></div>";
     }
 }
 
@@ -66,7 +67,7 @@ function actualizarTablaEmpresas() {
     ];
     console.log(empresas);
     for(let i=0; i<empresas.length; i++){
-        tabla.innerHTML += "<div class='row border-top border-bottom border-dark border-2'><div class='col-md-3 align-middle'><img src='"+empresas[i].fotoEmpresa+"' alt='prof-pic' height='100px' class='p-1 mx-5'></div><div class='col-md-3'><div class='row m-3'><div class='col-md-12'><label class='form-check-label' for='trabajador1'>"+empresas[i].nombreEmpresa+"</label></div></div><div class='row m-3'><div class='col-md-6'>"+empresas[i].fechaEmpresa+"</div><div class='col-md-6'>"+empresas[i].idEmpresa+"</div></div></div><div class='col-md-3 align-middle'><a class='btn btn-primary btn-guardar m-4' href='./expediente.html'>Ver Datos</a></div><div class='col-md-3 align-middle'><button class='btn btn-primary btn-guardar my-4 mx-2' href='#'><i class='bi bi-file-earmark-person'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' href='#'><i class='bi bi-pencil-square'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' href='#'><i class='bi bi-eraser-fill'></i></button></div></div>";
+        tabla.innerHTML += "<div class='row border-top border-bottom border-dark border-2'><div class='col-md-3 align-middle'><img src='"+empresas[i].fotoEmpresa+"' alt='prof-pic' height='100px' class='p-1 mx-5'></div><div class='col-md-3'><div class='row m-3'><div class='col-md-12'><label class='form-check-label' for='trabajador1'>"+empresas[i].nombreEmpresa+"</label></div></div><div class='row m-3'><div class='col-md-6'>"+empresas[i].fechaEmpresa+"</div><div class='col-md-6'>"+empresas[i].idEmpresa+"</div></div></div><div class='col-md-3 align-middle'><a class='btn btn-primary btn-guardar m-4' href='expedienteEmpresa.php'>Ver Datos</a></div><div class='col-md-3 align-middle'><button class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-file-earmark-person'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' ><i class='bi bi-pencil-square'></i></button><button type='submit' class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-eraser-fill'></i></button></div></div>";
     }
 }
 
@@ -132,5 +133,46 @@ function actualizarExpedienteTrabajador() {
     document.getElementById("estadoSalud").innerHTML=trabajador.estadoSalud;
     document.getElementById("observacionesMedicas").innerHTML=trabajador.observacionesMedicas;
     document.getElementById("empresa").innerHTML=trabajador.empresa;
+}
+
+function actualizarExpedienteEmpresa() {
+    let empresa = {
+        "idEmpresa": 1,
+        "nombre": "S.H.I.E.L.D.",
+        "fechaFundacion":"15-mayo-1965",
+        "giroEmpresarial":"Servicios",
+        "regimenFiscal":"Servicios Profesionales",
+        "edificio":"Torre Vengadores",
+        "direccion":"Pym St.",
+        "numeroExterior":1311,
+        "numeroInterior":54,
+        "colonia":"Downtown",
+        "municipio":"Lone Island",
+        "estado":"New York",
+        "codigoPostal":72760,
+        "email":"attention@shield.gov",
+        "representanteLegal":"Nick J. Fury",
+        "telefono":"333-333-4444",
+        "rfc":"http://www.twitter.com"
+    };
+    console.log(empresa);
+    document.getElementById("idEmpresa").innerHTML=empresa.idEmpresa;
+    document.getElementById("nombre").innerHTML=empresa.nombre;
+    document.getElementById("fechaFundacion").innerHTML=empresa.fechaFundacion;
+    document.getElementById("giroEmpresarial").innerHTML=empresa.giroEmpresarial;
+    document.getElementById("regimenFiscal").innerHTML=empresa.regimenFiscal;
+    document.getElementById("edificio").innerHTML=empresa.edificio;
+    document.getElementById("direccion").innerHTML=empresa.direccion;
+    document.getElementById("numeroExterior").innerHTML=empresa.numeroExterior;
+    document.getElementById("numeroInterior").innerHTML=empresa.numeroInterior;
+    document.getElementById("colonia").innerHTML=empresa.colonia;
+    document.getElementById("municipio").innerHTML=empresa.municipio;
+    document.getElementById("estado").innerHTML=empresa.estado;
+    document.getElementById("codigoPostal").innerHTML=empresa.codigoPostal;
+    document.getElementById("email").innerHTML=empresa.email;
+    document.getElementById("representanteLegal").innerHTML=empresa.representanteLegal;
+    document.getElementById("telefono").innerHTML=empresa.telefono;
+    document.getElementById("rfc").setAttribute("href",empresa.rfc);
+    
 }
 

@@ -12,15 +12,8 @@
 
   <body class="bg-C" onload={actualizarExpedienteTrabajador()}>
 
-    <!-- Encabezado -->
-    <header>
-      <nav class="navbar navbar-default bg-A font-white">
-        <div class="container">
-          <img src="./assets/img/logo-blanco-nombre.png" alt="logo" width="5%" class="d-inline-block align-text-top">
-          <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
-        </div>
-      </nav>
-    </header>
+    <!--Header-->
+    <?php require 'partials/headerIn.php'; ?>
 
     <!-- Expediente-título -->
     <div class="container">

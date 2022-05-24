@@ -10,13 +10,8 @@
         <script src='./assets/js/script.js'></script>
     </head>
     <body class='bg-C' onload={actualizarTablaTrabajadores()}>
-        <nav class='navbar navbar-default bg-A font-white'>
-            <div class='container'>
-                    <img src='./assets/img/logo-blanco-nombre.png' alt='logo' width='5%' class='d-inline-block align-text-top'>
-                    <p class='fs-3 m-auto'><b>Consorcio Vengadores S. A. de C. V.</b></p>
-                    <i class='bi bi-box-arrow-right fs-1' alt='login' class='d-inline-block align-text-top'></i>
-            </div>
-        </nav>
+        <!--Header-->
+        <?php require 'partials/headerIn.php'; ?>
         <div class='container bg-C'>
             <!--Barra de busqueda-->
             <form class='row py-3'>
@@ -46,7 +41,7 @@
                     </div>
                 </form>
                 <div class='col-md-3'>
-                    <a type='submit' class='btn btn-primary mb-3 btn-guardar' href='./formularioTrabajadores.html'><i class='bi bi-plus-square'></i>     Nuevo Trabajador</a>
+                    <a type='submit' class='btn btn-primary mb-3 btn-guardar' href='./formularioTrabajadores.php'><i class='bi bi-plus-square'></i>     Nuevo Trabajador</a>
                 </div>
             </div>
             <form>

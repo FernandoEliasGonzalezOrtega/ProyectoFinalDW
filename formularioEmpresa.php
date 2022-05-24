@@ -12,13 +12,8 @@
     </head>
     <body class="bg-C">
 
-        <nav class="navbar navbar-default bg-A font-white">
-            <div class="container">
-                    <img src="./assets/img/logo-blanco-nombre.png" alt="logo"  class=" logo d-inline-block align-text-top">
-                    <p class="fs-3 m-auto"><b>Consorcio Vengadores S. A. de C. V.</b></p>
-                    <i class="bi bi-box-arrow-right fs-1" alt="login" class="d-inline-block align-text-top"></i>       
-            </div>
-        </nav>
+        <!--Header-->
+        <?php require 'partials/headerIn.php'; ?>
         
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
@@ -130,8 +125,12 @@
                 <label> </label>
                 <div class="row justify-content-md-center">
                     <div class="d-grid gap-2 col-4 mx-auto">
+                        <a class="btn btn-lg btn-guardar" href="./empresasEdit.php">Volver</a>
+                    </div>
+                    <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="button" class="btn btn-guardar btn-lg" href="./empresasEdit.html" value="Guardar">
                     </div>
+                    
                 </div>
             </form>
         </div>
