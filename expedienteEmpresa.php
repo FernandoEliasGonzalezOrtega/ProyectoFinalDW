@@ -47,7 +47,6 @@ nvo($des);
         <!-- Giro empresarial -->
         <div class="col-sm-6"><p class="campo">Giro empresarial:</p></div>
         <div class="col-sm-6"><p id="giroEmpresarial"></p></div>
-<<<<<<< Updated upstream
         <!-- Regimen Fiscal -->
         <div class="col-sm-6"><p class="campo">Regimen fiscal:</p></div>
         <div class="col-sm-6"><p id="regimenFiscal"></p></div>
@@ -60,28 +59,6 @@ nvo($des);
             <div class="col-sm-12 titulo"><h1>Domicilio fiscal</h1></div>
           </div>
           <div class="row gy-3 expediente-2">
-=======
-        <!-- Fecha de nacimiento -->
-        <div class="col-sm-6"><p class="campo">Fecha de nacimiento:</p></div>
-        <div class="col-sm-6"><p id="fecha"></p></div>
-        <!-- CURP -->
-        <div class="col-sm-6"><p class="campo">CURP:</p></div>
-        <div class="col-sm-6">
-          <a class='btn btn-primary mb-3 btn-guardar' class="info" id="curp">Ver archivo</a>
-        </div>
-        <!-- Teléfono celular -->
-        <div class="col-sm-6"><p class="campo">Teléfono celular:</p></div>
-        <div class="col-sm-6"><p id="telefonoCelular"></p></div>
-        <!-- Teléfono de casa -->
-        <div class="col-sm-6"><p class="campo">Teléfono de casa:</p></div>
-        <div class="col-sm-6"><p id="telefonoCasa"></p></div>
-        <!-- Correo electrónico -->
-        <div class="col-sm-6"><p class="campo">Correo:</p></div>
-        <div class="col-sm-6"><p id="email"></p></div>
-        <!-- Género -->
-        <div class="col-sm-6"><p class="campo">Género:</p></div>
-        <div class="col-sm-6"><p id="genero"></p></div>
->>>>>>> Stashed changes
         <!-- Dirección -->
         <div class="col-sm-6"><p class="campo">Dirección:</p></div>
         <div class="col-sm-6"><p id="direccion"></p></div>
@@ -127,24 +104,8 @@ nvo($des);
   </div>
 
 
-    <!-- Pie de página -->
-    <footer class="bg-A text-center fs-6 sticky-bottom font-white">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">Todos los derechos reservados.</div>
-          </div>
-          <div class="row">
-              <div class="col-md-4">Consorcio Vengadores S. A. de C. V.</div>
-              <div class="col-md-4">Departamento de Recursos Humanos</div>
-              <div class="col-md-4">Tel: 222-123-1234</div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <a href="./historial.html">Historial de acceso</a>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!--Footer-->
+    <?php require 'partials/footerIn.php'; ?>
 
   </body>
 
