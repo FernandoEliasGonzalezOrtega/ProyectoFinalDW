@@ -176,3 +176,29 @@ function actualizarExpedienteEmpresa() {
     
 }
 
+function actualizarHistorial(actividad){
+    let tabla = document.getElementById("historial");
+    tabla.innerHTML="";
+    /*let actividad = [
+        {
+            "usuario": "Tony Stark",
+            "fecha": "19-mar-2022 13:45",
+            "actividad":"Consulta de registros",
+        },
+        {
+            "usuario": "Steve Rogers",
+            "fecha": "21-nov-2021",
+            "actividad":"Modificación de registros",
+        },
+        {
+            "usuario": "Peter Parker",
+            "fecha": "26-sep-2021",
+            "actividad":"Eliminación de registros",
+        }
+    ];*/
+    for(let i=0; i<actividad.length; i++){
+        tabla.innerHTML+="<div class='row'><div class='col-sm-4'><p>"+actividad[i].usuario+"</p></div><div class='col-sm-4'><p>"+actividad[i].fecha+"</p></div><div class='col-sm-4'><p>"+actividad[i].descripcion+"</p></div></div>";
+    }
+}
+
+

@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <a href="./historial.html">Historial de acceso</a>
+                <a href="./historialTabla.php">Historial de acceso</a>
             </div>
         </div>
     </div>

@@ -131,7 +131,7 @@
         <div class="col-sm-5"></div>
         <div class="col-sm-4">
           <form action="index.html" method="post">
-            <a type="button" class='btn btn-primary mb-3 btn-guardar' name="button">Ver datos de la empresa</a>
+            <a type="button" class='btn btn-primary mb-3 btn-guardar' name="button" href="./expedienteEmpresa.php">Ver datos de la empresa</a>
           </form>
         </div>
       </div>
@@ -140,24 +140,8 @@
       </div>
     </div>
 
-    <!-- Pie de página -->
-    <footer class="bg-A text-center fs-6 sticky-bottom font-white">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">Todos los derechos reservados.</div>
-          </div>
-          <div class="row">
-              <div class="col-md-4">Consorcio Vengadores S. A. de C. V.</div>
-              <div class="col-md-4">Departamento de Recursos Humanos</div>
-              <div class="col-md-4">Tel: 222-123-1234</div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <a href="./historial.html">Historial de acceso</a>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!--Footer-->
+    <?php require 'partials/footerIn.php'; ?>
 
   </body>
 
