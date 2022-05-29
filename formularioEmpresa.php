@@ -17,7 +17,7 @@
         
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
-            <form>
+            <form method="POST">
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <h1>Registro de Empresa</h1>
@@ -27,70 +27,65 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre/Razón Social</label>
-                        <input type="text" class="form-control" placeholder="Empresa" id="business" required>
+                        <input type="text" class="form-control" placeholder="Empresa" name="business" required>
                     </div>
                     <div class="col-md-4">
                         <label>Fecha de fundación</label>
-                        <input type="date" class="form-control" id="dateFoundation" required>
+                        <input type="date" class="form-control" name="dateFoundation" required>
                     </div>
                     <div class="col-md-4">
                         <label>Giro Empresarial</label>
-                        <input type="text" class="form-control" placeholder="Giro Empresarial" id="businessRotation">
+                        <input type="text" class="form-control" placeholder="Giro Empresarial" name="businessRotation">
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Regimen Fiscal</label>
-                        <select class="form-control" id="regimenFiscal" required>
+                        <select class="form-control" name="regimenFiscal" required>
                             <option selected>Seleccionar...</option>
-                            <option>Salud 1</option>
-                            <option>Salud 2</option>
-                            <option>Salud 3</option>
+                            
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label>Edificio</label>
-                        <input type="text" class="form-control" id="building" placeholder="Edificio" required>
+                        <input type="text" class="form-control" name="building" placeholder="Edificio" required>
                     </div>
                 </div>
                 <h2>Domicilio Fiscal</h2>
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Calle</label>
-                        <input type="text" class="form-control" placeholder="Calle" id="streetBussines" required>
+                        <input type="text" class="form-control" placeholder="Calle" name="streetBusines" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-3">
                         <label>No. Exterior</label>
-                        <input type="text" class="form-control" placeholder="#####" id="externalNumberBusiness" required>
+                        <input type="text" class="form-control" placeholder="#####" name="externalNumberBusiness" required>
                     </div>
                     <div class="col-md-3">
                         <label>No. Interior</label>
-                        <input type="text" class="form-control" id="internalNumberBusiness" placeholder="#####">
+                        <input type="text" class="form-control" name="internalNumberBusiness" placeholder="#####">
                     </div>
                     <div class="form-group col-md-6">
                         <label>Colonia</label>
-                        <input type="text" class="form-control" placeholder="Colonia" id="suburbBusiness" required>
+                        <input type="text" class="form-control" placeholder="Colonia" name="suburbBusiness" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-6">
                         <label>Municipio</label>
-                        <input type="text" class="form-control" placeholder="Municipio" id="cityBusiness" required>
+                        <input type="text" class="form-control" placeholder="Municipio" name="cityBusiness" required>
                     </div> 
                     <div class="form-group col-md-4">
                         <label>Estado</label>
-                        <select class="form-control" id="stateBusiness" required>
+                        <select class="form-control" name="stateBusiness" required>
                             <option selected>Seleccionar...</option>
-                            <option>Estado 1</option>
-                            <option>Estado 2</option>
-                            <option>Estado 3</option>
                         </select>
                         </div>
                         <div class="form-group col-md-2">
                         <label>C. P.</label>
-                        <input type="text" class="form-control" placeholder="Código Postal" id="zipBusiness" required>
+                        <input type="text" class="form-control" placeholder="Código Postal" name="zipBusiness" required>
                         </div> 
                 </div>
 
@@ -103,23 +98,23 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Email" id="emailBussines" required>
+                        <input type="email" class="form-control" placeholder="Email" name="emailBussines" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Representante Legal</label>
-                        <input type="text" class="form-control" placeholder="Representante Legal" id="legalRepresentativeBusiness" required>
+                        <input type="text" class="form-control" placeholder="Representante Legal" name="legalRepresentativeBusiness" required>
                     </div>
                     <div class="col-md-6">
                         <label>Teléfono</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" id="emergencyPhoneBusiness" required>
+                        <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" name="phoneBusiness" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>RFC</label>
-                        <input type="file" class="form-control" placeholder="RFC" id="rfcBussines" required>
+                        <input type="file" class="form-control" placeholder="RFC" name="rfcBusines" required>
                     </div>
                 </div>
                 <label> </label>

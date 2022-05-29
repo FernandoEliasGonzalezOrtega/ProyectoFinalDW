@@ -17,7 +17,7 @@
         
         <div class="container bg-C div-form">
             <br><i class="bi bi-person-circle font-icon"></i><br>
-            <form action="guardadoDatosTrabajador.php" method="GET">
+            <form method="POST">
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <h1>Datos Personales</h1>
@@ -210,7 +210,7 @@
                         <input type="button" class="btn btn-lg btn-guardar" href="./trabajadoresEdit.php" value="Volver" name="btnBack">
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <input type="buttom" class="btn btn-guardar btn-lg"  value="Guardar" name="btnSafe">
+                        <input type="buttom" class="btn btn-guardar btn-lg" href="./formularioTrabajadores.php" value="Guardar" name="btnSafeTrabajador">
                     </div>
                     
                 </div>
