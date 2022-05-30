@@ -43,7 +43,18 @@
                         <label>Regimen Fiscal</label>
                         <select class="form-control" name="regimenFiscal" required>
                             <option selected>Seleccionar...</option>
-                            
+                            <option value="PERSONA MORAL">PERSONA MORAL</option>
+                            <option value="PERSONA FISICA CON RÉGIMEN SIMPLIFICADO DE CONFIANZA">PERSONA FISICA CON RÉGIMEN SIMPLIFICADO DE CONFIANZA</option>
+                            <option value="PERSONA FISICA CON SUELDOS Y SALARIOS E INGRESOS ASIMILADOS A SALARIOS">PERSONA FISICA CON SUELDOS Y SALARIOS E INGRESOS ASIMILADOS A SALARIOS</option>
+                            <option value="PERSONA FISICA CON RÉGIMEN DE ACTIVIDADES EMPRESARIALES Y PROFESIONALES">PERSONA FISICA CON RÉGIMEN DE ACTIVIDADES EMPRESARIALES Y PROFESIONALES</option>
+                            <option value="PERSONA FISICA CON RÉGIMEN DE INCORPORACIÓN FISCAL">PERSONA FISICA CON RÉGIMEN DE INCORPORACIÓN FISCAL</option>
+                            <option value="PERSONA FISICA CON ENAJENACIÓN DE BIENES">PERSONA FISICA CON ENAJENACIÓN DE BIENES</option>
+                            <option value="PERSONA FISICA CON RÉGIMEN DE ACTIVIDADES EMPRESARIALES CON INGRESOS A TRAVÉS DE PLATAFORMAS TECNOLÓGICAS">PERSONA FISICA CON RÉGIMEN DE ACTIVIDADES EMPRESARIALES CON INGRESOS A TRAVÉS DE PLATAFORMAS TECNOLÓGICAS</option>
+                            <option value="PERSONA FISICA CON RÉGIMEN DE ARRENDAMIENTO">PERSONA FISICA CON RÉGIMEN DE ARRENDAMIENTO</option>
+                            <option value="PERSONA FISICA CON INTERESES">PERSONA FISICA CON INTERESES</option>
+                            <option value="PERSONA FISICA CON OBTENCIÓN DE PREMIOS">PERSONA FISICA CON OBTENCIÓN DE PREMIOS</option>
+                            <option value="PERSONA FISICA CON DIVIDENDOS">PERSONA FISICA CON DIVIDENDOS</option>
+                            <option value="PERSONA FISICA CON DEMÁS INGRESO">PERSONA FISICA CON DEMÁS INGRESO</option>
                         </select>
                     </div>
                     <div class="col-md-6">
@@ -81,11 +92,12 @@
                         <label>Estado</label>
                         <select class="form-control" name="stateBusiness" required>
                             <option selected>Seleccionar...</option>
+
                         </select>
                         </div>
                         <div class="form-group col-md-2">
                         <label>C. P.</label>
-                        <input type="text" class="form-control" placeholder="Código Postal" name="zipBusiness" required>
+                        <input type="text" maxlength="5" class="form-control" placeholder="Código Postal" name="zipBusiness" required>
                         </div> 
                 </div>
 
@@ -114,7 +126,7 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>RFC</label>
-                        <input type="file" class="form-control" placeholder="RFC" name="rfcBusines" required>
+                        <input type="text" maxlength="13" class="form-control" placeholder="RFC" name="rfcBusines" required>
                     </div>
                 </div>
                 <label> </label>
@@ -123,7 +135,7 @@
                         <a class="btn btn-lg btn-guardar" href="./empresasEdit.php">Volver</a>
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <input type="button" class="btn btn-guardar btn-lg" href="./empresasEdit.html" value="Guardar">
+                        <input type="button" class="btn btn-guardar btn-lg" value="Guardar" name="">
                     </div>
                     
                 </div>

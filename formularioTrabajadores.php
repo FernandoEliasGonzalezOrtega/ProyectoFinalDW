@@ -13,7 +13,7 @@
     <body class="bg-C">
 
         <!--Header-->
-        <?php require 'partials/headerIn.php'; ?>
+        <?php require 'partials/headerIn.php'; require 'bd.php'; require 'funcionesBotonesFormularios.php';?>
         
         <div class="container bg-C div-form">
             <br><i class="bi bi-person-circle font-icon"></i><br>
@@ -45,15 +45,15 @@
                     </div>
                     <div class="col-md-6">
                         <label>CURP</label>
-                        <input type="file" class="form-control" name="curpWorker" required>
+                        <input type="text" class="form-control" name="curpWorker" required>
                     </div>
                     <div class="col-md-2">
                         <label>Género</label>
                         <select class="form-control" name="genereWorker" required>
                             <option selected>Seleccionar...</option>
-                            <option>Masculino</option>
-                            <option>Femenino</option>
-                            <option>Otro</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Femenino</option>
+                            <option value="3">Otro</option>
                         </select>
                     </div>
                 </div>
@@ -93,14 +93,12 @@
                         <label>Estado</label>
                         <select class="form-control" name="stateWorker" required>
                             <option selected>Seleccionar...</option>
-                            <option>Estado 1</option>
-                            <option>Estado 2</option>
-                            <option>Estado 3</option>
+                            
                         </select>
                         </div>
                         <div class="form-group col-md-2">
                         <label>C. P.</label>
-                        <input type="text" class="form-control" placeholder="Código Postal" name="zipWorker" required>
+                        <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
                         </div> 
                 </div>
 
@@ -146,22 +144,37 @@
                         <label>Empresa</label>
                         <select class="form-control" name="businessWorker" required>
                             <option selected>Seleccionar...</option>
-                            <option>Empresa 1</option>
-                            <option>Empresa 2</option>
-                            <option>Empresa 3</option>
+                            <?php
+                                //REALIZAMOS LA CONSULTA A LA BASE DE DATOS
+                                $query = "SELECT idEmpresa, nombre FROM Empresa ORDER BY idEmpresa ASC";
+                                $resultados = mysqli_query($conn, $query);
+                                //EJECUTAMOS EL CICLO WHILE PARA MOSTAR TODAS LAS OPCIONES.
+                                while($consulta = mysqli_fetch_array($resultados)){
+                                    echo '<option value="'.$consulta['idEmpresa'].'">'.$consulta['nombre'].'</option>';
+                                }
+                            ?>
                         </select>
                     </div>
                     <div class="col-md-4">
                         <label>Sueldo</label>
-                        <input type="text" class="form-control" placeholder="Sueldo" name="salaryWorker" required>
+                        <input type="number" class="form-control" placeholder="Sueldo" name="salaryWorker" value="0.00" step="0.01" required>
                     </div>
                     <div class="col-md-4">
                         <label>Puesto</label>
                         <select class="form-control" name="jobWorker" required>
                             <option selected>Seleccionar...</option>
-                            <option>Puesto 1</option>
-                            <option>Puesto 2</option>
-                            <option>Puesto 3</option>
+                            <option value="DIRECTOR EJECUTIVO">DIRECTOR EJECUTIVO</option>
+                            <option value="DIRECTOR DE OPERACIONES">DIRECTOR DE OPERACIONES</option>
+                            <option value="DIRECTOR COMERCIAL">DIRECTOR COMERCIAL</option>
+                            <option value="DIRECTOR DE MARKETING">DIRECTOR DE MARKETING</option>
+                            <option value="DIRECTOR DE RECURSOS HUMANOS">DIRECTOR DE RECURSOS HUMANOS</option>
+                            <option value="DIRECTOR FINANCIERO">DIRECTOR FINANCIERO</option>
+                            <option value="EMPLEADO DE OPERACIONES">EMPLEADO DE OPERACIONES</option>
+                            <option value="EMPLEADO DE VENTAS">EMPLEADO DE VENTAS</option>
+                            <option value="EMPLEADO DE MARKETING">EMPLEADO DE MARKETING</option>
+                            <option value="EMPLEADO DE RECURSOS HUMANOS">EMPLEADO DE RECURSOS HUMANOS</option>
+                            <option value="EMPLEADO DE FINANZAS">EMPLEADO DE FINANZAS</option>
+                            <option value="BECARIO">BECARIO</option>
                         </select>
                     </div>
                 </div>
@@ -172,7 +185,7 @@
                     </div>
                     <div class="col-md-4">
                         <label>No. de Contrato</label>
-                        <input type="text" class="form-control" placeholder="No. de Contrato" name="contractNumberWorker" required>
+                        <input type="number" maxlength="5" min="1" class="form-control" placeholder="No. de Contrato" name="contractNumberWorker" required>
                     </div>
                     <div class="col-md-4">
                         <label>Objeto de Contrato</label>
@@ -182,11 +195,11 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">                        
                         <label>R. F. C.</label>
-                        <input type="file" class="form-control" name="rfcWorker" required>
+                        <input type="text" maxlength="13" class="form-control" name="rfcWorker" required>
                     </div>
                     <div class="col-md-6">
                         <label>N. S. S.</label>
-                        <input type="file" class="form-control" name="nssWorker" required>
+                        <input type="text" maxlength="10" class="form-control" name="nssWorker" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
@@ -194,9 +207,9 @@
                         <label>Estado de Salud</label>
                         <select class="form-control" name="healthyWorker" required>
                             <option selected>Seleccionar...</option>
-                            <option>Salud 1</option>
-                            <option>Salud 2</option>
-                            <option>Salud 3</option>
+                            <option value="1">Sano</option>
+                            <option value="2">Enfermedad crónica</option>
+                            <option value="3">Embarazo</option>
                         </select>
                     </div>
                     <div class="col-md-6">
@@ -210,7 +223,7 @@
                         <input type="button" class="btn btn-lg btn-guardar" href="./trabajadoresEdit.php" value="Volver" name="btnBack">
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <input type="buttom" class="btn btn-guardar btn-lg" href="./formularioTrabajadores.php" value="Guardar" name="btnSafeTrabajador">
+                        <input type="button" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeTrabajador">
                     </div>
                     
                 </div>
