@@ -66,12 +66,10 @@
                 </div>
                 
                 <div class="row justify-content-md-center">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <label>Calle</label>
                         <input type="text" class="form-control" placeholder="Calle" name="streetWorker" required>
                     </div>
-                </div>
-                <div class="row justify-content-md-center">
                     <div class="col-md-3">
                         <label>No. Exterior</label>
                         <input type="text" class="form-control" placeholder="#####" name="externalNumberWorker" required>
@@ -79,6 +77,13 @@
                     <div class="col-md-3">
                         <label>No. Interior</label>
                         <input type="text" class="form-control" placeholder="#####" name="internalNumberWorker">
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="form-group col-md-6">
+                        <label>C. P.</label>
+                        <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
+                        <button>Buscar</button>
                     </div>
                     <div class="form-group col-md-6">
                         <label>Colonia</label>
@@ -98,8 +103,8 @@
                         </select>
                         </div>
                         <div class="form-group col-md-2">
-                        <label>C. P.</label>
-                        <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
+                            <label>C. P.</label>
+                            <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
                         </div> 
                 </div>
 
