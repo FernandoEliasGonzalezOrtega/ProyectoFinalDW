@@ -1,3 +1,13 @@
+<?php
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: index.php');
+        exit();
+    }
+
+    require './partials/historial.php';
+        $des = "FORMULARIO PARA TRABAJADOR";
+        nvo($des);
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>

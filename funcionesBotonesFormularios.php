@@ -32,10 +32,11 @@
         $estadoSalud = intval($_POST['healthyWorker']);
         $observacionesMedicas = $_POST['medicalNotesWorker'];
 
-        //realizamos los insert en las tablas correspondientes.
+        //realizamos las consultas en las tablas correspondientes.
         $sqlDireccion = "INSERT INTO Direccion (calle, noExterior, noInterior, cp, colonia, municipio, estado) 
                         VALUES ($calle,$noExt,$noInt,$cp,$col,$municipio,$estado)";
         $aux = "SELECT MAX(idDireccion) AS nuevoID FROM Direccion";
+        //realizamos los insert en las tablas correspondientes.
         mysqli_query($conn, $sqlDireccion);
         $sqlMax = mysqli_query($conn, $aux);
         $row = mysqli_fetch_assoc($sqlMax);
@@ -47,6 +48,11 @@
             $telefono,$email,$genero,$contactoEmergencia,$salario,$fechaIng,$puesto,$noContrato,$observacionesMedicas,$estadoSalud,
             $nss,$rfc,$objetoContrato)";
         mysqli_query($conn, $sqlInsertarEmpleado);
+        session_start();
+
+        require './partials/historial.php';
+        $des = "REGISTRÓ TRABAJADOR";
+        nvo($des);
         include ("cerrarConexion.php");
     }
   
@@ -83,6 +89,9 @@
         idDireccion, telefono, mail, repLegal, rfc) VALUES ($nombre,$fechaFund,$giro,$regimen,$edificio,$idDireccion,
         $telefono,$email,$representante,$rfc";
         mysqli_query($conn, $sqlInsertarEmpresa);
+        require './partials/historial.php';
+        $des = "REGISTRÓ EMPRESA";
+        nvo($des);
         include ("cerrarConexion.php");
     }
 
