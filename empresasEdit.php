@@ -10,17 +10,17 @@
   $des = "MENÚ EMPRESAS.";
   nvo($des);
 
-    require 'bd.php';
-    $where = "";
-    if(!empty($_POST)){
-        $valor = $_POST['buscar'];
-        if (!empty($valor)){
-            $where = "WHERE nombre LIKE '%$valor%'";
-        }
+require 'bd.php';
+$where = "";
+if(!empty($_POST)){
+    $valor = $_POST['buscar'];
+    if (!empty($valor)){
+        $where = "WHERE nombre LIKE '%$valor%'";
     }
-    $sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
+}
+$sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
  ?>
 
 
@@ -32,7 +32,6 @@
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-        <script src='./assets/js/script.js'></script>
     </head>
     <body class="bg-C">
         <!--Header-->

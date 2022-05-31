@@ -41,7 +41,7 @@
                     </div>
                 </form>
                 <div class='col-md-3'>
-                    <a type='submit' class='btn btn-primary mb-3 btn-guardar' href='./formularioTrabajadores.php'><i class='bi bi-plus-square'></i>     Nuevo Trabajador</a>
+                    <a class='btn btn-primary mb-3 btn-guardar' href='./formularioTrabajadores.php'><i class='bi bi-plus-square'></i>     Nuevo Trabajador</a>
                 </div>
             </div>
             <form>

@@ -42,7 +42,7 @@
         <?php if(!empty($message)): ?>
         <?php echo  "<script> alert('".$message."'); </script>" ?>
         <?php endif; ?>
-        <div class="container">
+        <div class="container cont-Login">
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class=" col-md-6 login">

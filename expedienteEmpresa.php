@@ -8,6 +8,12 @@ if (!isset($_SESSION['user_id'])) {
 require './partials/historial.php';
 $des = "EXPEDIENTE EMPRESAS.";
 nvo($des);
+
+require 'bd.php';
+        $sql = "SELECT usuario, fecha, descripcion FROM Historial ORDER BY fecha DESC ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $stmt->bind_result($usuario, $fecha, $descripcion);
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +27,7 @@ nvo($des);
     <script src='./assets/js/script.js'></script>
   </head>
 
-  <body class="bg-C" onload={actualizarExpedienteEmpresa()}>
+  <body class="bg-C">
 
     <!--Header-->
     <?php require 'partials/headerIn.php'; ?>
@@ -35,9 +41,6 @@ nvo($des);
     <!-- Expediente-datos -->
     <div class="container">
       <div class="row gy-3 expediente-2">
-        <!-- Id Empresa -->
-        <div class="col-sm-6"><p class="campo">Número de empresa:</p></div>
-        <div class="col-sm-6"><p id="idEmpresa"></p></div>
         <!-- Nombre -->
         <div class="col-sm-6"><p class="campo">Nombre / Razon Social:</p></div>
         <div class="col-sm-6"><p id="nombre"></p></div>
