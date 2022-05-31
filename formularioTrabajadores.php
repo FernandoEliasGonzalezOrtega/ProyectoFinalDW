@@ -230,7 +230,8 @@
                 <label>   </label>
                 <div class="row justify-content-md-center">
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <input type="button" class="btn btn-lg btn-guardar" href="./trabajadoresEdit.php" value="Volver" name="btnBack">
+                        <a class="btn btn-lg btn-guardar" href="./trabajadoresEdit.php">Volver</a>
+                    
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="button" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeTrabajador">
