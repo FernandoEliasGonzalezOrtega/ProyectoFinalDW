@@ -1,26 +1,26 @@
 <?php
-  session_start();
+    session_start();
 
-  if (!isset($_SESSION['user_id'])) {
-    header('Location: index.php');
-    exit();
-  }
-
-  require './partials/historial.php';
-  $des = "MENÚ EMPRESAS.";
-  nvo($des);
-
-require 'bd.php';
-$where = "";
-if(!empty($_POST)){
-    $valor = $_POST['buscar'];
-    if (!empty($valor)){
-        $where = "WHERE nombre LIKE '%$valor%'";
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: index.php');
+        exit();
     }
-}
-$sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where";
-$stmt = $conn->prepare($sql);
-$stmt->execute();
+
+    require './partials/historial.php';
+    $des = "MENÚ EMPRESAS.";
+    nvo($des);
+
+    require 'bd.php';
+    $where = "";
+    if(!empty($_POST)){
+        $valor = $_POST['buscar'];
+        if (!empty($valor)){
+            $where = "WHERE nombre LIKE '%$valor%'";
+        }
+    }
+    $sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
  ?>
 
 
@@ -86,7 +86,7 @@ $stmt->execute();
                                 </div>
                             </div>
                             <div class='col-md-3 align-middle'>
-                                <a class='btn btn-primary btn-guardar m-4' href='./expedienteEmpresa.php'>Ver Datos</a>
+                                <a class='btn btn-primary btn-guardar m-4' href='./expedienteEmpresa.php?id=<?php echo $id?>'>Ver Datos</a>
                             </div>
                             <div class='col-md-3 align-middle'>
                                 <button class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-file-earmark-person'></i></button>
