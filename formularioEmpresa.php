@@ -8,12 +8,16 @@
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
+        <script src='./assets/js/codigosPostales.js'></script>
     </head>
     <body class="bg-C">
 
         <!--Header-->
-        <?php require 'partials/headerIn.php'; ?>
+        <?php 
+            require 'partials/headerIn.php'; 
+            require 'bd.php'; 
+            require 'funcionesBotonesFormularios.php'; 
+        ?>
         
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
@@ -66,7 +70,7 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Calle</label>
-                        <input type="text" class="form-control" placeholder="Calle" name="streetBusines" required>
+                        <input type="text" class="form-control" placeholder="Calle" name="streetBusiness" required>
                     </div>
                     <div class="col-md-3">
                         <label>No. Exterior</label>
@@ -80,14 +84,14 @@
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-4">
                         <label>C. P.</label>
-                        <input type="text" maxlength="5" class="form-control" placeholder="Código Postal" name="zipBusiness" required>
+                        <input type="text" maxlength="5" class="form-control" placeholder="Código Postal" name="zipBusiness" id="cp" required>
                     </div>
                     <div class="form-group col-md-1">
-                        <input type="button" class="btn btn-guardar btn-s mt-4" value="Buscar" name="btnSerchBusiness">
+                        <input type="button" class="btn btn-guardar btn-s mt-4" value="Buscar" name="btnSerchBusiness" onclick={actualizarFormulario()}>
                     </div>
                     <div class="form-group col-md-7">
                         <label>Colonia</label>
-                        <select class="form-control" name="suburbBusiness" required>
+                        <select class="form-control" name="suburbBusiness" id="colonia" required>
                             <option selected>Seleccionar...</option>
                         </select>
                     </div>
@@ -95,14 +99,14 @@
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-6">
                         <label>Municipio</label>
-                        <select class="form-control" name="cityBusiness" required>
+                        <select class="form-control" name="cityBusiness" id="municipio" required>
                             <option selected>Seleccionar...</option>
 
                         </select>
                     </div> 
                     <div class="form-group col-md-6">
                         <label>Estado</label>
-                        <select class="form-control" name="stateBusiness" required>
+                        <select class="form-control" name="stateBusiness" id="estado" required>
                             <option selected>Seleccionar...</option>
 
                         </select>
@@ -119,7 +123,7 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Email" name="emailBussines" required>
+                        <input type="email" class="form-control" placeholder="Email" name="emailBusiness" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
@@ -129,13 +133,13 @@
                     </div>
                     <div class="col-md-6">
                         <label>Teléfono</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" name="phoneBusiness" required>
+                        <input type="tel" class="form-control" maxlength="10" placeholder="55-1234-5678"  name="phoneBusiness" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>RFC</label>
-                        <input type="text" maxlength="13" class="form-control" placeholder="RFC" name="rfcBusines" required>
+                        <input type="text" maxlength="13" class="form-control" placeholder="RFC" name="rfcBusiness" required>
                     </div>
                 </div>
                 <label> </label>
@@ -144,7 +148,7 @@
                         <a class="btn btn-lg btn-guardar" href="./empresasEdit.php">Volver</a>
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <input type="button" class="btn btn-guardar btn-lg" value="Guardar" name="">
+                        <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeEmpresa">
                     </div>
                     
                 </div>

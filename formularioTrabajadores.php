@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <script src='./assets/js/codigosPostales.js'></script>
 
     </head>
     <body class="bg-C">
@@ -49,7 +50,7 @@
                     </div>
                     <div class="col-md-6">
                         <label>CURP</label>
-                        <input type="text" class="form-control" name="curpWorker" required>
+                        <input type="text" maxlength="18" class="form-control" name="curpWorker" required>
                     </div>
                     <div class="col-md-2">
                         <label>Género</label>
@@ -85,16 +86,15 @@
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-4">
                         <label>C. P.</label>
-                        <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
+                        <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required id="cp">
                     </div>
                     <div class="form-group col-md-1">
-                        <button class="btn btn-guardar btn-s mt-4" name="btnSerchZIP">Buscar</button>
+                        <button type="button" class="btn btn-guardar btn-s mt-4" name="btnSerchZIP" onclick={actualizarFormulario()}>Buscar</button>
                     </div>
                     <div class="form-group col-md-7">
                         <label>Colonia</label>
-                        <select class="form-control" name="suburbWorker" required>
+                        <select class="form-control" name="suburbWorker" required id="colonia">
                             <option selected>Seleccionar...</option>
-                            <?php getColonias(); ?>
                             
                         </select>
                     </div>
@@ -102,16 +102,15 @@
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-6">
                         <label>Municipio</label>
-                        <select class="form-control" name="cityWorker" required>
+                        <select class="form-control" name="cityWorker" required id="municipio">
                             <option selected>Seleccionar...</option>
-                            <?php getMunicipio(); ?>
                         </select>
                     </div> 
                     <div class="form-group col-md-6">
                         <label>Estado</label>
-                        <select class="form-control" name="stateWorker" required>
+                        <select class="form-control" name="stateWorker" required id="estado">
                             <option selected>Seleccionar...</option>
-                            <?php getEstado(); ?>
+
                         </select>
                     </div>
                 </div>
@@ -131,11 +130,11 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Teléfono Celular</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" name="mobileWorker" required>
+                        <input type="tel" class="form-control" placeholder="55-1234-5678"  name="mobileWorker" required>
                     </div>
                     <div class="col-md-6">
                         <label>Teléfono Residencial</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" name="phoneWorker" required>
+                        <input type="tel" class="form-control" placeholder="55-1234-5678"  name="phoneWorker" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
@@ -145,7 +144,7 @@
                     </div>
                     <div class="col-md-6">
                         <label>Teléfono de Emergencia</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" name="emergencyPhoneWorker" required>
+                        <input type="tel" class="form-control" placeholder="55-1234-5678"  name="emergencyPhoneWorker" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
@@ -238,7 +237,7 @@
                     
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
-                        <input type="button" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeTrabajador">
+                        <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeTrabajador">
                     </div>
                     
                 </div>
