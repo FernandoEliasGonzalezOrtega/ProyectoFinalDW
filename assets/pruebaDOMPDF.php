@@ -1,6 +1,7 @@
 <?php
-  ob_start(); 
+  ob_start(); // Se utiliza para empezar a llenar el buffer y poder posar el contenido HTML a una variable PHP.
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -11,12 +12,10 @@
     <!--<link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </head>
 
   <body class="bg-C">
-
     <!-- Encabezado -->
     <header>
       <nav class="navbar navbar-default bg-A font-white">
@@ -26,7 +25,6 @@
         </div>
       </nav>
     </header>
-
     <!-- Expediente-título -->
     <div class="container">
       <div class="row expediente-1">
@@ -179,24 +177,32 @@
 </html>
 
 <?php
+  // En la variable $html se va a recibir todo el contenido que vamos a mandar a DOMPDF para crear el archivo.
   $html = ob_get_clean();
-  // echo $html;
 
+  /* Debemos incluir DOMPDF indicando la ruta desde el archivo (pruebaDOMPDF.php) hasta donde se encuentre
+  el archivo llamado autoload.php que se ecuenta en la carpeta vendor */
   require '../vendor/autoload.php';
 
-  // reference the Dompdf namespace
+  // Habilitamos el uso de DOMPDF
   use Dompdf\Dompdf;
-
-  // instantiate and use the dompdf class
   $dompdf = new Dompdf();
+
+  // Activamos una opción que permite el uso de imágenes con DOMPDF
+  $options = $dompdf->getOptions();
+  $options->set(array('isRemoteEnable' => true));
+  $dompdf->setOptions($options);
+
+  // Cargamos la información que cargamos a la variable $html a DOMPDF.
   $dompdf->loadHtml($html);
 
-  // (Optional) Setup the paper size and orientation
+  // Seleccionamos el tipo de hoja
   $dompdf->setPaper('letter');
 
-  // Render the HTML as PDF
+  // Creamos el archivo PDF
   $dompdf->render();
 
-  // Output the generated PDF to Browser
-  $dompdf->stream("prueba_.pdf", array("Attachment"=>true));
+  // Seleccionamos la manera en que se va a mostrar el pdf
+  $dompdf->stream("titulo_archivo.pdf", array("Attachment"=>true));
+  // Si usamos "true" se descarga directamente, con "false" se muestra desde el navegador.
 ?>
