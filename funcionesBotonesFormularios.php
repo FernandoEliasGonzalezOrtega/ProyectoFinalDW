@@ -95,4 +95,63 @@
         include ("cerrarConexion.php");
     }
 
+    function getColonias(){
+        require 'bd.php';
+        if(isset($_POST['btnSerchZIP'])){
+            $cp = $_POST['zipWorker'];
+            //REALIZAMOS LA CONSULTA A LA BASE DE DATOS
+            $query = "SELECT colonia.chcodigo_postal, colonia.chdescripcion, municipio.chd_municipio, estado.chd_estado 
+            FROM colonia INNER JOIN municipio ON colonia.nukidmunicipio=municipio.nukidmunicipio 
+            INNER JOIN estado ON municipio.nukidestado=estado.nukidestado 
+            WHERE colonia.chcodigo_postal = $cp ORDER BY colonia.nukidcolonia ASC";
+            $resultados = mysqli_query($conn, $query);
+        
+    
+            //EJECUTAMOS EL CICLO WHILE PARA MOSTAR TODAS LAS OPCIONES.
+            while($consulta = mysqli_fetch_array($resultados)){
+                echo '<option value="'.$consulta['chdescripcion'].'">'.$consulta['chdescripcion'].'</option>';
+            }
+        }
+        require 'cerrarConexion.php';
+    }
+    function getMunicipio(){
+        require 'bd.php';
+        if(isset($_POST['btnSerchZIP'])){
+            $cp = $_POST['zipWorker'];
+            //REALIZAMOS LA CONSULTA A LA BASE DE DATOS
+            $query = "SELECT colonia.chcodigo_postal, colonia.chdescripcion, municipio.chd_municipio, estado.chd_estado 
+            FROM colonia INNER JOIN municipio ON colonia.nukidmunicipio=municipio.nukidmunicipio 
+            INNER JOIN estado ON municipio.nukidestado=estado.nukidestado 
+            WHERE colonia.chcodigo_postal = $cp ORDER BY colonia.nukidcolonia ASC";
+            $resultados = mysqli_query($conn, $query);
+        
+    
+            //EJECUTAMOS EL CICLO WHILE PARA MOSTAR TODAS LAS OPCIONES.
+            $consulta = mysqli_fetch_array($resultados);
+            echo '<option value="'.$consulta['chdmunicipio'][0].'">'.$consulta['chdmunicipio'][0].'</option>';
+        
+        }
+        require 'cerrarConexion.php';
+    }
+
+    function getEstado(){
+        require 'bd.php';
+        if(isset($_POST['btnSerchZIP'])){
+            $cp = $_POST['zipWorker'];
+            //REALIZAMOS LA CONSULTA A LA BASE DE DATOS
+            $query = "SELECT colonia.chcodigo_postal, colonia.chdescripcion, municipio.chd_municipio, estado.chd_estado 
+            FROM colonia INNER JOIN municipio ON colonia.nukidmunicipio=municipio.nukidmunicipio 
+            INNER JOIN estado ON municipio.nukidestado=estado.nukidestado 
+            WHERE colonia.chcodigo_postal = $cp ORDER BY colonia.nukidcolonia ASC";
+            $resultados = mysqli_query($conn, $query);
+        
+    
+            //EJECUTAMOS EL CICLO WHILE PARA MOSTAR TODAS LAS OPCIONES.
+            $consulta = mysqli_fetch_array($resultados);
+            echo '<option value="'.$consulta['chd_estado'][0].'">'.$consulta['chd_estado'][0].'</option>';
+        
+        }
+        require 'cerrarConexion.php';
+    }
+
 ?>

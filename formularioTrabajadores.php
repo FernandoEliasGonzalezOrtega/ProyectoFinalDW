@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -14,7 +13,11 @@
     <body class="bg-C">
 
         <!--Header-->
-        <?php require 'partials/headerIn.php'; require 'bd.php'; require 'funcionesBotonesFormularios.php';?>
+        <?php 
+            require 'partials/headerIn.php'; 
+            require 'bd.php'; 
+            require 'funcionesBotonesFormularios.php';            
+        ?>
         
         <div class="container bg-C div-form">
             <br><i class="bi bi-person-circle font-icon"></i><br>
@@ -80,32 +83,37 @@
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label>C. P.</label>
                         <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
-                        <button>Buscar</button>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-1">
+                        <button class="btn btn-guardar btn-s mt-4" name="btnSerchZIP">Buscar</button>
+                    </div>
+                    <div class="form-group col-md-7">
                         <label>Colonia</label>
-                        <input type="text" class="form-control" placeholder="Colonia" name="suburbWorker" required>
+                        <select class="form-control" name="suburbWorker" required>
+                            <option selected>Seleccionar...</option>
+                            <?php getColonias(); ?>
+                            
+                        </select>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
                     <div class="form-group col-md-6">
                         <label>Municipio</label>
-                        <input type="text" class="form-control" placeholder="Municipio" name="cityWorker" required>
+                        <select class="form-control" name="cityWorker" required>
+                            <option selected>Seleccionar...</option>
+                            <?php getMunicipio(); ?>
+                        </select>
                     </div> 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label>Estado</label>
                         <select class="form-control" name="stateWorker" required>
                             <option selected>Seleccionar...</option>
-                            
+                            <?php getEstado(); ?>
                         </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label>C. P.</label>
-                            <input type="text" class="form-control" maxlength="5" placeholder="Código Postal" name="zipWorker" required>
-                        </div> 
+                    </div>
                 </div>
 
                 <div class="row justify-content-md-center">
