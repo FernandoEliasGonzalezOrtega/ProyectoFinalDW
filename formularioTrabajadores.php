@@ -130,11 +130,11 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Teléfono Celular</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678"  name="mobileWorker" required>
+                        <input type="tel" class="form-control" placeholder="5512345678" maxlength="10" name="mobileWorker" required>
                     </div>
                     <div class="col-md-6">
                         <label>Teléfono Residencial</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678"  name="phoneWorker" required>
+                        <input type="tel" class="form-control" placeholder="5512345678" maxlength="10" name="phoneWorker" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
@@ -144,7 +144,7 @@
                     </div>
                     <div class="col-md-6">
                         <label>Teléfono de Emergencia</label>
-                        <input type="tel" class="form-control" placeholder="55-1234-5678"  name="emergencyPhoneWorker" required>
+                        <input type="tel" class="form-control" placeholder="5512345678" maxlength="10" name="emergencyPhoneWorker" required>
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
