@@ -1,15 +1,12 @@
 <?php
   session_start();
-
   if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
   }
-
   require './partials/historial.php';
   $des = " INGRESÓ MODIFICAR TRABAJADOR";
   nvo($des);
-
   require 'bd.php';
   $idBusqueda=$_GET["id"]; 
   $sql = "SELECT noTrabajador, t.idEmpresa, t.idDireccion, tEmergencia, nombres, aPaterno, aMaterno, fechaNacimiento, curp, noCelular, noCasa, t.mail, genero, cEmergencia, sueldo, fechaIngreso, puesto, noContrato, oMedica, salud, nss, t.rfc, objContrato, e.nombre, calle, noExterior, noInterior, cp, colonia, municipio, estado FROM Empleado t JOIN Empresa e ON t.idEmpresa=e.idEmpresa JOIN Direccion d ON t.idDireccion=d.idDireccion WHERE noTrabajador=$idBusqueda";
@@ -28,16 +25,13 @@
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <script src='./assets/js/codigosPostales.js'></script>
-
     </head>
     <body class="bg-C">
-
         <!--Header-->
         <?php 
             require 'partials/headerIn.php'; 
             require 'funcionesBotonesFormularios.php';            
         ?>
-        
         <div class="container bg-C div-form">
             <br><i class="bi bi-person-circle font-icon"></i><br>
             <form method="POST">
@@ -316,5 +310,4 @@
         <!--Footer-->
         <?php require 'partials/footerIn.php'; ?>    
     </body>
-    
 </html>
