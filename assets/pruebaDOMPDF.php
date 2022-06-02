@@ -182,7 +182,6 @@
 
   /* Debemos incluir DOMPDF indicando la ruta desde el archivo (pruebaDOMPDF.php) hasta donde se encuentre
   el archivo llamado autoload.php que se ecuenta en la carpeta vendor */
-  require '../vendor/autoload.php';
   require 'autoload.php';
 
   // Habilitamos el uso de DOMPDF
