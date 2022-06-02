@@ -61,5 +61,4 @@
         <!--Footer-->
         <?php require 'partials/footer.php'; ?>
     </body>
-
 </html>
