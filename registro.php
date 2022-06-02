@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['user_id'])) {
   header('Location: index.php');
   exit();
@@ -69,7 +68,6 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="col-md-3"></div>
             </div>
         </div>
-
         <footer class="bg-A text-center fs-6 sticky-bottom font-white">
             <div class="container">
                 <div class="row">
