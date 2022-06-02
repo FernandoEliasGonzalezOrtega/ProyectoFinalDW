@@ -8,8 +8,8 @@
   <head>
     <meta charset="utf-8">
     <title>Expediente de trabajador</title>
-    <link type="text/css" rel="stylesheet" href="localhost/ProyectoDW/assets/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="localhost/ProyectoDW/assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
   </head>
 
   <body class="bg-C">

@@ -1,6 +1,6 @@
 <?php
+  ob_start(); // Se utiliza para empezar a llenar el buffer y poder posar el contenido HTML a una variable PHP.
   session_start();
-
   if (!isset($_SESSION['user_id'])) {
   header('Location: index.php');
   exit();
@@ -153,12 +153,6 @@
           <a type="button" class='btn btn-primary mb-3 btn-guardar' href="./expedienteEmpresa.php?id=<?php echo $rowTrabajador['idEmpresa']?>" target='_blank'>Ver datos de la empresa</a>
         </div>
       </div>
-      <div class="row py-3">
-        <a class="btn btn-guardar btn-lg" href='./archivoPDF.php?id=<?php echo $idBusqueda?>'>Generar archivo PDF</a>
-      </div>
-      <div class="row py-3">
-        <a href='./trabajadoresEdit.php' class="btn btn-guardar btn-lg">Volver</a>
-      </div>
     </div>
 
     <!--Footer-->
@@ -167,3 +161,30 @@
   </body>
 
 </html>
+
+
+<?php
+  // En la variable $html se va a recibir todo el contenido que vamos a mandar a DOMPDF para crear el archivo.
+  $html = ob_get_clean();
+
+  /* Debemos incluir DOMPDF indicando la ruta desde el archivo (pruebaDOMPDF.php) hasta donde se encuentre
+  el archivo llamado autoload.php que se ecuenta en la carpeta vendor */
+  require './assets/dompdf/autoload.inc.php';
+
+  // Habilitamos el uso de DOMPDF
+  use Dompdf\Dompdf;
+  $dompdf = new Dompdf();
+
+  // Cargamos la información que cargamos a la variable $html a DOMPDF.
+  $dompdf->loadHtml($html);
+
+  // Seleccionamos el tipo de hoja
+  $dompdf->setPaper('letter');
+
+  // Creamos el archivo PDF
+  $dompdf->render();
+
+  // Seleccionamos la manera en que se va a mostrar el pdf
+  $dompdf->stream("Expediente.pdf", array("Attachment"=>true));
+  // Si usamos "true" se descarga directamente, con "false" se muestra desde el navegador.
+?>
