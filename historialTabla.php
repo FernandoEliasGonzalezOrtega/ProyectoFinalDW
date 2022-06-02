@@ -35,11 +35,11 @@
   <script src='./assets/js/script.js'></script>
 </head>
 
-<body class="bg-C"}>
+<body class="bg-C">
 
   <!--Header-->
   <?php require 'partials/headerIn.php'; ?>
-        <div class="container">
+  <div class="container">
 
   <!-- Títulos de tabla -->
   <div class="container history">
@@ -64,9 +64,10 @@
         <a href='./trabajadoresEdit.php' class="btn btn-guardar btn-lg">Volver</a>
     </div>
   </div>
+  </div>
 
   <!--Footer-->
-  <?php require 'partials/footer.php'; ?>
+  <?php require 'partials/footerIn.php'; ?>
   
 </body>
 

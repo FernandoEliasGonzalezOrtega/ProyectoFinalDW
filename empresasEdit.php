@@ -18,7 +18,7 @@
             $where = "WHERE nombre LIKE '%$valor%'";
         }
     }
-    $sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where";
+    $sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where ORDER BY idEmpresa DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
  ?>
@@ -43,7 +43,7 @@
                     <input type="text" class="form-control" id="worksearch" name="buscar" placeholder="Ingresa el nombre de la empresa">
                 </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary mb-3 btn-guardar"}><i class="bi bi-search"></i>  Buscar</button>
+                    <button type="submit" class="btn btn-primary mb-3 btn-guardar"><i class="bi bi-search"></i>  Buscar</button>
                 </div>
             </form>
             <!--Switch de vistas-->
@@ -65,7 +65,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <a type='submit' class='btn btn-primary mb-3 btn-guardar' href='./formularioEmpresa.php'><i class='bi bi-plus-square'></i>     Nueva Empresa</a>
+                    <a type='submit' class='btn btn-primary mb-3 btn-guardar' href='./formularioEmpresa.php'><i class='bi bi-plus-square'></i>     Nueva Empresa</a>
                 </div>
             </div>
             <div class="row">

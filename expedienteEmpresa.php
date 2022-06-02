@@ -6,7 +6,7 @@
   exit();
   }
   require './partials/historial.php';
-  $des = "EXPEDIENTE EMPRESAS.";
+  $des = "EXPEDIENTE EMPRESA.";
   nvo($des);
   require 'bd.php';
   $idBusqueda=$_GET["id"]; 
