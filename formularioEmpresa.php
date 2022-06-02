@@ -25,12 +25,12 @@
     <body class="bg-C">
 
         <!--Header-->
-        <?php
-            require 'partials/headerIn.php';
-            require 'bd.php';
-            require 'partials/funcionesBotonesFormularios.php';
+        <?php 
+            require 'partials/headerIn.php'; 
+            require 'bd.php'; 
+            require 'funcionesBotonesFormularios.php'; 
         ?>
-
+        
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
             <form method="POST">
@@ -39,7 +39,7 @@
                         <h1>Registro de Empresa</h1>
                     </div>
                 </div>
-
+                
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre/Razón Social</label>
@@ -115,7 +115,7 @@
                             <option selected>Seleccionar...</option>
 
                         </select>
-                    </div>
+                    </div> 
                     <div class="form-group col-md-6">
                         <label>Estado</label>
                         <select class="form-control" name="stateBusiness" id="estado" required>
@@ -123,7 +123,7 @@
 
                         </select>
                     </div>
-
+                         
                 </div>
 
                 <div class="row justify-content-md-center">
@@ -131,7 +131,7 @@
                         <h2>Contacto</h2>
                     </div>
                 </div>
-
+                
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
@@ -162,12 +162,12 @@
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeEmpresa">
                     </div>
-
+                    
                 </div>
             </form>
         </div>
         <!--Footer-->
-        <?php require 'partials/footerIn.php'; ?>
+        <?php require 'partials/footerIn.php'; ?>   
     </body>
-
+    
 </html>

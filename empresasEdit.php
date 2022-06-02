@@ -37,8 +37,8 @@
                 let alerta = confirm("¿Seguro que quieres borrar este registro?");
                 if (alerta==true) {
                     console.log("Registro eliminado");
-                    window.open("partials/borrarEmpresa.php?id="+id,"_self");
-                    location.href= "partials/borrarEmpresa.php?id="+id;
+                    window.open("borrarEmpresa.php?id="+id,"_self");
+                    location.href= "borrarEmpresa.php?id="+id;
                 } else {
                     console.log("Se canceló la operación");
                 }

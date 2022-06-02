@@ -33,12 +33,12 @@
     <body class="bg-C">
 
         <!--Header-->
-        <?php
-            require 'partials/headerIn.php';
+        <?php 
+            require 'partials/headerIn.php'; 
             include ("bd.php");
-            require 'partials/funcionesBotonesFormularios.php';
+            require 'funcionesBotonesFormularios.php'; 
         ?>
-
+        
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
             <form method="POST">
@@ -47,7 +47,7 @@
                         <h1>Registro de Empresa</h1>
                     </div>
                 </div>
-
+                
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre/Razón Social</label>
@@ -69,7 +69,7 @@
                             <option selected>Seleccionar...</option>
                             <?php
                             $regs = ["PERSONA MORAL", "PERSONA FISICA CON RÉGIMEN SIMPLIFICADO DE CONFIANZA", "PERSONA FISICA CON SUELDOS Y SALARIOS E INGRESOS ASIMILADOS A SALARIOS", "PERSONA FISICA CON RÉGIMEN DE ACTIVIDADES EMPRESARIALES Y PROFESIONALES", "PERSONA FISICA CON RÉGIMEN DE INCORPORACIÓN FISCAL", "PERSONA FISICA CON ENAJENACIÓN DE BIENES", "PERSONA FISICA CON RÉGIMEN DE ACTIVIDADES EMPRESARIALES CON INGRESOS A TRAVÉS DE PLATAFORMAS TECNOLÓGICAS", "PERSONA FISICA CON RÉGIMEN DE ARRENDAMIENTO", "PERSONA FISICA CON INTERESES", "PERSONA FISICA CON OBTENCIÓN DE PREMIOS", "PERSONA FISICA CON DIVIDENDOS", "PERSONA FISICA CON DEMÁS INGRESO"];
-                            for ($i=0; $i <12 ; $i=$i+1) {
+                            for ($i=0; $i <12 ; $i=$i+1) { 
                                 echo "<option value='".$regs[$i]."' ";
                                 if ($regs[$i]==$rowEmpresa['regimenF']) {
                                     echo "selected>";
@@ -125,7 +125,7 @@
                             <option>Seleccionar...</option>
                             <option value="<?php echo $rowEmpresa['municipio'] ?>" selected><?php echo $rowEmpresa['municipio'] ?></option>
                         </select>
-                    </div>
+                    </div> 
                     <div class="form-group col-md-6">
                         <label>Estado</label>
                         <select class="form-control" name="stateBusiness" id="estado" required>
@@ -133,7 +133,7 @@
                             <option value="<?php echo $rowEmpresa['estado'] ?>" selected><?php echo $rowEmpresa['estado'] ?></option>
                         </select>
                     </div>
-
+                         
                 </div>
 
                 <div class="row justify-content-md-center">
@@ -141,7 +141,7 @@
                         <h2>Contacto</h2>
                     </div>
                 </div>
-
+                
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
@@ -168,19 +168,19 @@
                 <div class="row justify-content-md-center">
                 <div class="d-grid gap-2 col-4 mx-auto">
                         <a class="btn btn-lg btn-guardar" href="./empresasEdit.php">Volver</a>
-
+                    
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnModificarEmpresa">
                     </div>
-
+                    
                 </div>
                 <input type="hidden" name="idDireccion" value="<?php echo $rowEmpresa['idDireccion'] ?>">
                 <input type="hidden" name="idEmpresa" value="<?php echo $idBusqueda ?>">
             </form>
         </div>
         <!--Footer-->
-        <?php require 'partials/footerIn.php'; ?>
+        <?php require 'partials/footerIn.php'; ?>   
     </body>
-
+    
 </html>
