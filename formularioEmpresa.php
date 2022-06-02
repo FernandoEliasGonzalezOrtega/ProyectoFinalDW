@@ -1,11 +1,9 @@
 <?php
   session_start();
-
   if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
   }
-
   require './partials/historial.php';
   $des = " INGRESÓ FORMULARIO EMPRESA";
   nvo($des);
@@ -23,14 +21,12 @@
         <script src='./assets/js/codigosPostales.js'></script>
     </head>
     <body class="bg-C">
-
         <!--Header-->
         <?php 
             require 'partials/headerIn.php'; 
             require 'bd.php'; 
             require 'funcionesBotonesFormularios.php'; 
-        ?>
-        
+        ?>     
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
             <form method="POST">
@@ -38,8 +34,7 @@
                     <div class="col-md-12">
                         <h1>Registro de Empresa</h1>
                     </div>
-                </div>
-                
+                </div>              
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre/Razón Social</label>
@@ -161,13 +156,11 @@
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeEmpresa">
-                    </div>
-                    
+                    </div>                    
                 </div>
             </form>
         </div>
         <!--Footer-->
         <?php require 'partials/footerIn.php'; ?>   
-    </body>
-    
+    </body>   
 </html>
