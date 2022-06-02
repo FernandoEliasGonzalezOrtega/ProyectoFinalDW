@@ -27,12 +27,12 @@
     <body class="bg-C">
 
         <!--Header-->
-        <?php 
-            require 'partials/headerIn.php'; 
-            require 'bd.php'; 
-            require 'funcionesBotonesFormularios.php';            
+        <?php
+            require 'partials/headerIn.php';
+            require 'bd.php';
+            require 'partials/funcionesBotonesFormularios.php';
         ?>
-        
+
         <div class="container bg-C div-form">
             <br><i class="bi bi-person-circle font-icon"></i><br>
             <form method="POST">
@@ -41,7 +41,7 @@
                         <h1>Datos Personales</h1>
                     </div>
                 </div>
-                
+
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre(s)</label>
@@ -81,7 +81,7 @@
                         <h4>Dirección</h4>
                     </div>
                 </div>
-                
+
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Calle</label>
@@ -108,7 +108,7 @@
                         <label>Colonia</label>
                         <select class="form-control" name="suburbWorker" required id="colonia">
                             <option selected>Seleccionar...</option>
-                            
+
                         </select>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                         <select class="form-control" name="cityWorker" required id="municipio">
                             <option selected>Seleccionar...</option>
                         </select>
-                    </div> 
+                    </div>
                     <div class="form-group col-md-6">
                         <label>Estado</label>
                         <select class="form-control" name="stateWorker" required id="estado">
@@ -133,7 +133,7 @@
                         <h4>Contacto</h4>
                     </div>
                 </div>
-                
+
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
@@ -219,7 +219,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="col-md-6">                        
+                    <div class="col-md-6">
                         <label>R. F. C.</label>
                         <input type="text" maxlength="13" class="form-control" name="rfcWorker" required>
                     </div>
@@ -247,18 +247,18 @@
                 <div class="row justify-content-md-center">
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <a class="btn btn-lg btn-guardar" href="./trabajadoresEdit.php">Volver</a>
-                    
+
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnSafeTrabajador">
                     </div>
-                    
+
                 </div>
 
             </form>
         </div>
         <!--Footer-->
-        <?php require 'partials/footerIn.php'; ?>    
+        <?php require 'partials/footerIn.php'; ?>
     </body>
-    
+
 </html>

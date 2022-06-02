@@ -11,10 +11,10 @@
   nvo($des);
 
   require 'bd.php';
-  $idBusqueda=$_GET["id"]; 
+  $idBusqueda=$_GET["id"];
   $sql = "SELECT noTrabajador, t.idEmpresa, t.idDireccion, tEmergencia, nombres, aPaterno, aMaterno, fechaNacimiento, curp, noCelular, noCasa, t.mail, genero, cEmergencia, sueldo, fechaIngreso, puesto, noContrato, oMedica, salud, nss, t.rfc, objContrato, e.nombre, calle, noExterior, noInterior, cp, colonia, municipio, estado FROM Empleado t JOIN Empresa e ON t.idEmpresa=e.idEmpresa JOIN Direccion d ON t.idDireccion=d.idDireccion WHERE noTrabajador=$idBusqueda";
   $sqlTrabajador = mysqli_query($conn, $sql);
-  $rowTrabajador = mysqli_fetch_assoc($sqlTrabajador);  
+  $rowTrabajador = mysqli_fetch_assoc($sqlTrabajador);
  ?>
 
 <!DOCTYPE html>
@@ -33,11 +33,11 @@
     <body class="bg-C">
 
         <!--Header-->
-        <?php 
-            require 'partials/headerIn.php'; 
-            require 'funcionesBotonesFormularios.php';            
+        <?php
+            require 'partials/headerIn.php';
+            require 'partials/funcionesBotonesFormularios.php';
         ?>
-        
+
         <div class="container bg-C div-form">
             <br><i class="bi bi-person-circle font-icon"></i><br>
             <form method="POST">
@@ -46,7 +46,7 @@
                         <h1>Datos Personales</h1>
                     </div>
                 </div>
-                
+
                 <div class="row justify-content-md-center">
                     <div class="col-md-4">
                         <label>Nombre(s)</label>
@@ -74,7 +74,7 @@
                         <label>Género</label>
                         <select class="form-control" name="genereWorker" required>
                             <option selected>Seleccionar...</option>
-                            <?php 
+                            <?php
                             for($i=1; $i<=3; $i=$i+1){
                                 echo "<option value=".$i;
                                 if ($i==$rowTrabajador['genero']) {
@@ -106,7 +106,7 @@
                         <h4>Dirección</h4>
                     </div>
                 </div>
-                
+
                 <div class="row justify-content-md-center">
                     <div class="col-md-6">
                         <label>Calle</label>
@@ -132,7 +132,7 @@
                     <div class="form-group col-md-7">
                         <label>Colonia</label>
                         <select class="form-control" name="suburbWorker" required id="colonia">
-                            
+
                             <option value="<?php echo $rowTrabajador['colonia'] ?>" selected><?php echo $rowTrabajador['colonia'] ?></option>
                         </select>
                     </div>
@@ -144,7 +144,7 @@
                             <option>Seleccionar...</option>
                             <option value="<?php echo $rowTrabajador['municipio'] ?>" selected><?php echo $rowTrabajador['municipio'] ?></option>
                         </select>
-                    </div> 
+                    </div>
                     <div class="form-group col-md-6">
                         <label>Estado</label>
                         <select class="form-control" name="stateWorker" required id="estado">
@@ -159,7 +159,7 @@
                         <h4>Contacto</h4>
                     </div>
                 </div>
-                
+
                 <div class="row justify-content-md-center">
                     <div class="col-md-12">
                         <label>Email</label>
@@ -222,9 +222,9 @@
                         <label>Puesto</label>
                         <select class="form-control" name="jobWorker" id="puesto" required>
                             <option selected>Seleccionar...</option>
-                            <?php 
+                            <?php
                                 $puestos = ['DIRECTOR EJECUTIVO', 'DIRECTOR DE OPERACIONES', 'DIRECTOR COMERCIAL', 'DIRECTOR DE MARKETING', 'DIRECTOR DE RECURSOS HUMANOS','DIRECTOR FINANCIERO',"EMPLEADO DE OPERACIONES", "EMPLEADO DE VENTAS", "EMPLEADO DE MARKETING", "EMPLEADO DE RECURSOS HUMANOS", "EMPLEADO DE FINANZAS","BECARIO"];
-                                for ($i=0; $i <12 ; $i=$i+1) { 
+                                for ($i=0; $i <12 ; $i=$i+1) {
                                     echo "<option value='".$puestos[$i]."' ";
                                     if ($puestos[$i]==$rowTrabajador['puesto']) {
                                         echo "selected>";
@@ -254,7 +254,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="col-md-6">                        
+                    <div class="col-md-6">
                         <label>R. F. C.</label>
                         <input type="text" value="<?php echo $rowTrabajador['rfc'] ?>" maxlength="13" class="form-control" name="rfcWorker" required>
                     </div>
@@ -302,19 +302,19 @@
                 <div class="row justify-content-md-center">
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <a class="btn btn-lg btn-guardar" href="./trabajadoresEdit.php">Volver</a>
-                    
+
                     </div>
                     <div class="d-grid gap-2 col-4 mx-auto">
                         <input type="submit" class="btn btn-guardar btn-lg" value="Guardar" name="btnModificarTrabajador">
                     </div>
-                    
+
                 </div>
                 <input type="hidden" name="idDireccion" value="<?php echo $rowTrabajador['idDireccion'] ?>">
                 <input type="hidden" name="idTrabajador" value="<?php echo $idBusqueda ?>">
             </form>
         </div>
         <!--Footer-->
-        <?php require 'partials/footerIn.php'; ?>    
+        <?php require 'partials/footerIn.php'; ?>
     </body>
-    
+
 </html>

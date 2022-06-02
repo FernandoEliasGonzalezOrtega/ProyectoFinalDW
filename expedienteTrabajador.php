@@ -166,7 +166,7 @@
         </div>
       </div>
       <div class="row py-3">
-        <a class="btn btn-guardar btn-lg" href='./archivoPDF.php?id=<?php echo $idBusqueda?>'>Generar archivo PDF</a>
+        <a class="btn btn-guardar btn-lg" href='./partials/archivoPDF.php?id=<?php echo $idBusqueda?>'>Generar archivo PDF</a>
       </div>
       <div class="row py-3">
         <a href='./trabajadoresEdit.php' class="btn btn-guardar btn-lg">Volver</a>
