@@ -37,8 +37,8 @@
                 let alerta = confirm("¿Seguro que quieres borrar este registro?");
                 if (alerta==true) {
                     console.log("Registro eliminado");
-                    window.open("./partials/borrarTrabajador.php?id="+id,"_self");
-                    location.href= "./partials/borrarTrabajador.php?id="+id;
+                    window.open("borrarTrabajador.php?id="+id,"_self");
+                    location.href= "borrarTrabajador.php?id="+id;
                 } else {
                     console.log("Se canceló la operación");
                 }
@@ -102,10 +102,10 @@
                                 <a class='btn btn-primary btn-guardar m-4' href='./expedienteTrabajador.php?id=<?php echo $id?>'>Ver Datos</a>
                             </div>
                             <div class='col-md-3 align-middle'>
-                                <a class="btn btn-primary btn-guardar my-4 mx-2" href='./partials/archivoPDF.php?id=<?php echo $id?>'><i class='bi bi-file-earmark-person'></i></a>
+                                <a class="btn btn-primary btn-guardar my-4 mx-2" href='./archivoPDF.php?id=<?php echo $id?>'><i class='bi bi-file-earmark-person'></i></a>
                                 <a class='btn btn-primary btn-guardar my-4 mx-2' href='./modificarTrabajador.php?id=<?php echo $id?>'><i class='bi bi-pencil-square'></i></a>
                                 <button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' name="deleteTrabajador" onClick={confirmarBorrar(<?php echo $id?>)}><i class='bi bi-eraser-fill'></i></button>
-
+                                
                             </div>
                         </div>
                         <?php }?>
