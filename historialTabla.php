@@ -1,11 +1,9 @@
 <?php
   session_start();
-
   if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
   }
-
   require './partials/historial.php';
   $des = " CONSULTA HISTORIAL";
   nvo($des);
@@ -18,14 +16,11 @@
         while ($stmt->fetch()) {
            echo "<div class='row'><div class='col-sm-4'><p>".$usuario."</p></div><div class='col-sm-4'><p>".$fecha."</p></div><div class='col-sm-4'><p>".$descripcion."</p></div></div>";
         }
-    }
-    
-   
+    }    
  ?>
 
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Historial</title>
@@ -34,9 +29,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <script src='./assets/js/script.js'></script>
 </head>
-
 <body class="bg-C">
-
   <!--Header-->
   <?php require 'partials/headerIn.php'; ?>
   <div class="container">
@@ -55,9 +48,7 @@
     <div class="row gy-1"> <!-- Usamos la clase gy-5 para el espaciado vertical de las filas -->
       <!-- Usuario 1 -->
       <?php Updhistorial()?>
-      
-    </div>
-    
+    </div>  
   </div>
   <div class="container">
     <div class="row py-3">
@@ -67,8 +58,6 @@
   </div>
 
   <!--Footer-->
-  <?php require 'partials/footerIn.php'; ?>
-  
+  <?php require 'partials/footerIn.php'; ?>  
 </body>
-
 </html>
