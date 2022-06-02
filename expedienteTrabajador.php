@@ -1,6 +1,5 @@
 <?php
   session_start();
-
   if (!isset($_SESSION['user_id'])) {
   header('Location: index.php');
   exit();
@@ -16,7 +15,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Expediente de trabajador</title>
@@ -25,12 +23,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <script src='./assets/js/script.js'></script>
   </head>
-
   <body class="bg-C">
-
     <!--Header-->
     <?php require 'partials/headerIn.php'; ?>
-
     <!-- Expediente-título -->
     <div class="container">
       <div class="row expediente-1">
@@ -109,12 +104,10 @@
         <div class="col-sm-6"><p class="campo">Teléfono de emergencia:</p></div>
         <div class="col-sm-6"><p id="telefonoEmergencia"><?php echo $rowTrabajador['tEmergencia']?></p></div>
       </div>
-
     <!-- Título - datos laborales -->
       <div class="row expediente-1">
         <div class="col-sm-12 titulo"><h1>Datos laborales</h1></div>
       </div>
-
     <!-- Datos laborales -->
       <div class="row gy-3 expediente-2">
         <!-- Sueldo -->
@@ -172,10 +165,7 @@
         <a href='./trabajadoresEdit.php' class="btn btn-guardar btn-lg">Volver</a>
       </div>
     </div>
-
     <!--Footer-->
     <?php require 'partials/footerIn.php'; ?>
-
   </body>
-
 </html>
