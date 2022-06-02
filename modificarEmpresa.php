@@ -1,15 +1,12 @@
 <?php
   session_start();
-
   if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit();
   }
-
   require './partials/historial.php';
   $des = " INGRESÓ MODIFICAR EMPRESA";
   nvo($des);
-
   require 'bd.php';
   $idBusqueda=$_GET["id"];
   $rowEmpresa ;
@@ -31,14 +28,12 @@
         <script src='./assets/js/codigosPostales.js'></script>
     </head>
     <body class="bg-C">
-
         <!--Header-->
         <?php 
             require 'partials/headerIn.php'; 
             include ("bd.php");
             require 'funcionesBotonesFormularios.php'; 
         ?>
-        
         <div class="container bg-C div-form">
             <br><i class="bi bi-building font-icon"></i><br>
             <form method="POST">
@@ -182,5 +177,4 @@
         <!--Footer-->
         <?php require 'partials/footerIn.php'; ?>   
     </body>
-    
 </html>
