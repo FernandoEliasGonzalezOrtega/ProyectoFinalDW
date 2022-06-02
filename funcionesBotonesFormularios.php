@@ -169,5 +169,55 @@
         $des = "MODIFICÓ TRABAJADOR $idTrabajador";
         nvo($des);
         //include ("cerrarConexion.php");
+        echo '<script>
+            window.open("trabajadoresEdit.php","_self");
+            location.href= "trabajadoresEdit.php";
+        </script>';
+    }
+
+    if(isset($_POST['btnModificarEmpresa'])){
+        //Conectamos al servidor
+        include ("bd.php");
+        //Recuperamos las variables
+        $nombre = $_POST['business'];
+        $fechaFund = $_POST['dateFoundation'];
+        $giro = $_POST['businessRotation'];
+        $regimen = $_POST['regimenFiscal'];
+        $edificio = $_POST['building'];
+        $calle = $_POST['streetBusiness'];
+        $noExt = $_POST['externalNumberBusiness'];
+        $noInt = $_POST['internalNumberBusiness'];
+        $col = $_POST['suburbBusiness'];
+        $municipio = $_POST['cityBusiness'];
+        $estado = $_POST['stateBusiness'];
+        $cp = $_POST['zipBusiness'];
+        $email = $_POST['emailBusiness'];
+        $representante = $_POST['legalRepresentativeBusiness'];
+        $telefono = $_POST['phoneBusiness'];
+        $rfc = $_POST['rfcBusiness'];
+        $idEmpresa = $_POST['idEmpresa'];
+        $idDireccion = $_POST['idDireccion'];
+
+        //realizamos las consultas en las tablas correspondientes.
+
+        $sqlModificarEmpresa = "UPDATE Empresa SET nombre='$nombre', fechaFundacion='$fechaFund', giroEmpresa='$giro', regimenF='$regimen', edificio='$edificio', telefono='$telefono', mail='$email', repLegal='$representante', rfc='$rfc' WHERE idEmpresa=$idEmpresa";
+        mysqli_query($conn, $sqlModificarEmpresa);
+
+        $sqlDireccion =" ";
+        if($noInt == NULL){
+            $sqlDireccion = "UPDATE Direccion SET calle='$calle', noExterior=$noExt, noInterior=NULL, cp='$cp', colonia='$col', municipio='$municipio', estado='$estado' WHERE idDireccion=$idDireccion";
+        }
+        else{
+            $sqlDireccion = "UPDATE Direccion SET calle='$calle', noExterior=$noExt, noInterior=$noInt, cp='$cp', colonia='$col', municipio='$municipio', estado='$estado' WHERE idDireccion=$idDireccion";
+        }
+        mysqli_query($conn, $sqlDireccion);
+
+        $des = "MODIFICÓ EMPRESA $idEmpresa";
+        nvo($des);
+        echo '<script>
+            window.open("empresasEdit.php","_self");
+            location.href= "empresasEdit.php";
+        </script>';
+        //include ("cerrarConexion.php");
     }
 ?>
