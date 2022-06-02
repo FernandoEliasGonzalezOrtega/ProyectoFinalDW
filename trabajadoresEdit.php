@@ -1,15 +1,12 @@
 <?php
     session_start();
-
     if (!isset($_SESSION['user_id'])) {
         header('Location: index.php');
         exit();
     }
-
     require './partials/historial.php';
     $des = "MENÚ TRABAJADORES.";
     nvo($des);
-
     require 'bd.php';
     $where = "";
     if(!empty($_POST)){
@@ -24,7 +21,6 @@
  ?>
 
 <!--Sitio para editar los datos de trabajadores-->
-
 <!DOCTYPE html>
 <html>
     <head>
