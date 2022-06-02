@@ -15,10 +15,10 @@
     if(!empty($_POST)){
         $valor = $_POST['buscar'];
         if (!empty($valor)){
-            $where = "WHERE nombres LIKE '%$valor%'";
+            $where = "AND nombres LIKE '%$valor%'";
         }
     }
-    $sql = "SELECT noTrabajador, nombres, aPaterno, aMaterno, nombre FROM Empleado t JOIN Empresa e ON t.idEmpresa = e.idEmpresa $where ORDER BY noTrabajador DESC";
+    $sql = "SELECT noTrabajador, nombres, aPaterno, aMaterno, nombre FROM Empleado t JOIN Empresa e ON t.idEmpresa = e.idEmpresa WHERE t.estatus=1 $where ORDER BY noTrabajador DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
  ?>
@@ -32,7 +32,18 @@
         <link rel='stylesheet' href='./assets/css/bootstrap.min.css'>
         <link rel='stylesheet' href='./assets/css/styles.css'>
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css'>
-        <script src='./assets/js/script.js'></script>
+        <script>
+            function confirmarBorrar(id) {
+                let alerta = confirm("¿Seguro que quieres borrar este registro?");
+                if (alerta==true) {
+                    console.log("Registro eliminado");
+                    window.open("borrarTrabajador.php?id="+id,"_self");
+                    location.href= "borrarTrabajador.php?id="+id;
+                } else {
+                    console.log("Se canceló la operación");
+                }
+            }
+        </script>
     </head>
     <body class='bg-C'>
         <!--Header-->
@@ -91,9 +102,10 @@
                                 <a class='btn btn-primary btn-guardar m-4' href='./expedienteTrabajador.php?id=<?php echo $id?>'>Ver Datos</a>
                             </div>
                             <div class='col-md-3 align-middle'>
-                                <button class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-file-earmark-person'></i></button>
+                                <a class="btn btn-primary btn-guardar my-4 mx-2" href='./archivoPDF.php?id=<?php echo $id?>'><i class='bi bi-file-earmark-person'></i></a>
                                 <a class='btn btn-primary btn-guardar my-4 mx-2' href='./modificarTrabajador.php?id=<?php echo $id?>'><i class='bi bi-pencil-square'></i></a>
-                                <button type='submit' class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-eraser-fill'></i></button>
+                                <button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' name="deleteTrabajador" onClick={confirmarBorrar(<?php echo $id?>)}><i class='bi bi-eraser-fill'></i></button>
+                                
                             </div>
                         </div>
                         <?php }?>

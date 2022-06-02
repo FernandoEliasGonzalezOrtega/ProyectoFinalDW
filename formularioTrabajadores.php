@@ -172,7 +172,7 @@
                             <option selected>Seleccionar...</option>
                             <?php
                                 //REALIZAMOS LA CONSULTA A LA BASE DE DATOS
-                                $query = "SELECT idEmpresa, nombre FROM Empresa ORDER BY idEmpresa ASC";
+                                $query = "SELECT idEmpresa, nombre FROM Empresa WHERE estatus=1 ORDER BY idEmpresa ASC";
                                 $resultados = mysqli_query($conn, $query);
                                 //EJECUTAMOS EL CICLO WHILE PARA MOSTAR TODAS LAS OPCIONES.
                                 while($consulta = mysqli_fetch_array($resultados)){

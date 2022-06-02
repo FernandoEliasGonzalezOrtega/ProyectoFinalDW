@@ -140,7 +140,19 @@
         <div class="col-sm-6"><p id="nss"><?php echo $rowTrabajador['nss']?></p></div>
         <!-- Estado de salud -->
         <div class="col-sm-6"><p class="campo">Estado de salud:</p></div>
-        <div class="col-sm-6"><p id="estadoSalud"><?php echo $rowTrabajador['salud']?></p></div>
+        <div class="col-sm-6"><p id="estadoSalud"><div class="col-sm-6"><p id="estadoSalud"><?php
+        switch($rowTrabajador['salud']){
+          case 1:
+            echo 'Sano';
+            break;
+          case 2:
+            echo 'Enfermedad crónica';
+            break;
+          case 3:
+            echo 'Embarazo';
+            break;
+        }
+        ?></p></div></p></div>
         <!-- Observaciones médicas -->
         <div class="col-sm-6"><p class="campo">Observaciones médicas:</p></div>
         <div class="col-sm-6"><p id="observacionesMedicas"><?php echo $rowTrabajador['oMedica']?></p></div>

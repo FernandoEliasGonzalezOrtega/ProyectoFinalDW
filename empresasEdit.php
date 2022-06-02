@@ -15,10 +15,10 @@
     if(!empty($_POST)){
         $valor = $_POST['buscar'];
         if (!empty($valor)){
-            $where = "WHERE nombre LIKE '%$valor%'";
+            $where = "AND nombre LIKE '%$valor%'";
         }
     }
-    $sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa $where ORDER BY idEmpresa DESC";
+    $sql = "SELECT idEmpresa, nombre, giroEmpresa FROM Empresa WHERE estatus=1 $where ORDER BY idEmpresa DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
  ?>
@@ -32,6 +32,18 @@
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <script>
+            function confirmarBorrar(id) {
+                let alerta = confirm("¿Seguro que quieres borrar este registro?");
+                if (alerta==true) {
+                    console.log("Registro eliminado");
+                    window.open("borrarEmpresa.php?id="+id,"_self");
+                    location.href= "borrarEmpresa.php?id="+id;
+                } else {
+                    console.log("Se canceló la operación");
+                }
+            }
+        </script>
     </head>
     <body class="bg-C">
         <!--Header-->
@@ -89,9 +101,8 @@
                                 <a class='btn btn-primary btn-guardar m-4' href='./expedienteEmpresa.php?id=<?php echo $id?>'>Ver Datos</a>
                             </div>
                             <div class='col-md-3 align-middle'>
-                                <button class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-file-earmark-person'></i></button>
                                 <a class='btn btn-primary btn-guardar my-4 mx-2' href='./modificarEmpresa.php?id=<?php echo $id?>'><i class='bi bi-pencil-square'></i></a>
-                                <button type='submit' class='btn btn-primary btn-guardar my-4 mx-2'><i class='bi bi-eraser-fill'></i></button>
+                                <button type='submit' class='btn btn-primary btn-guardar my-4 mx-2' name="deleteEmpresa" onClick={confirmarBorrar(<?php echo $id?>)}><i class='bi bi-eraser-fill'></i></button>
                             </div>
                         </div>
                         <?php }?>
