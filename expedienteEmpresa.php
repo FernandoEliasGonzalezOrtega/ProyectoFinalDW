@@ -1,28 +1,24 @@
 <?php
-  session_start();
-
-  if (!isset($_SESSION['user_id'])) {
-  header('Location: index.php');
-  exit();
-  }
-  require './partials/historial.php';
-  $des = "EXPEDIENTE EMPRESA.";
-  nvo($des);
-  require 'bd.php';
-  $idBusqueda=$_GET["id"]; 
-  $sql = "SELECT idEmpresa, nombre, fechaFundacion, giroEmpresa, regimenF, edificio, idDireccion, telefono, mail, repLegal, rfc FROM Empresa WHERE idEmpresa=$idBusqueda";
-  $sqlEmpresa = mysqli_query($conn, $sql);
-  $rowEmpresa = mysqli_fetch_assoc($sqlEmpresa);
-  $idDireccion = $rowEmpresa['idDireccion'];
-  $sql2 = "SELECT idDireccion, calle, noExterior, noInterior, cp, colonia, municipio, estado FROM Direccion WHERE idDireccion=$idDireccion";
-  $sqlDireccion = mysqli_query($conn, $sql2);
-  $rowDireccion = mysqli_fetch_assoc($sqlDireccion);
-
-  
+    session_start();
+    if (!isset($_SESSION['user_id'])) {
+      header('Location: index.php');
+      exit();
+    }
+    require './partials/historial.php';
+    $des = "EXPEDIENTE EMPRESA.";
+    nvo($des);
+    require 'bd.php';
+    $idBusqueda=$_GET["id"];
+    $sql = "SELECT idEmpresa, nombre, fechaFundacion, giroEmpresa, regimenF, edificio, idDireccion, telefono, mail, repLegal, rfc FROM Empresa WHERE idEmpresa=$idBusqueda";
+    $sqlEmpresa = mysqli_query($conn, $sql);
+    $rowEmpresa = mysqli_fetch_assoc($sqlEmpresa);
+    $idDireccion = $rowEmpresa['idDireccion'];
+    $sql2 = "SELECT idDireccion, calle, noExterior, noInterior, cp, colonia, municipio, estado FROM Direccion WHERE idDireccion=$idDireccion";
+    $sqlDireccion = mysqli_query($conn, $sql2);
+    $rowDireccion = mysqli_fetch_assoc($sqlDireccion);
 ?>
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Expediente de empresa</title>

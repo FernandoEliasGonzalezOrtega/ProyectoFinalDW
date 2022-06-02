@@ -1,15 +1,12 @@
 <?php
     session_start();
-
     if (!isset($_SESSION['user_id'])) {
         header('Location: index.php');
         exit();
     }
-
     require './partials/historial.php';
     $des = "MENÚ EMPRESAS.";
     nvo($des);
-
     require 'bd.php';
     $where = "";
     if(!empty($_POST)){
@@ -22,8 +19,6 @@
     $stmt = $conn->prepare($sql);
     $stmt->execute();
  ?>
-
-
 
 <!DOCTYPE html>
 <html>
