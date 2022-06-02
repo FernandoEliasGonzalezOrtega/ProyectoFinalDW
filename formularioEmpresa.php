@@ -1,3 +1,15 @@
+<?php
+  session_start();
+
+  if (!isset($_SESSION['user_id'])) {
+    header('Location: index.php');
+    exit();
+  }
+
+  require './partials/historial.php';
+  $des = " INGRESÓ FORMULARIO EMPRESA";
+  nvo($des);
+ ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>

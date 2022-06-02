@@ -56,7 +56,6 @@
             '$telefono','$email',$genero,'$contactoEmergencia',$salario,'$fechaIng','$puesto','$noContrato','$observacionesMedicas',$estadoSalud,
             '$nss','$rfc','$objetoContrato')";
         mysqli_query($conn, $sqlInsertarEmpleado);
-        session_start();
 
         require './partials/historial.php';
         $des = "REGISTRÓ TRABAJADOR";
@@ -114,4 +113,61 @@
         //include ("cerrarConexion.php");
     }
 
+    if(isset($_POST['btnModificarTrabajador'])){
+        //Conectamos al servidor
+        include ("bd.php");
+        //Recuperamos las variables
+        $idTrabajador = $_POST['idTrabajador'];
+        $nombre = $_POST['nameWorker'];
+        $apellidoPaterno = $_POST['lastNameWorker'];
+        $apellidoMaterno = $_POST['secondNameWorker'];
+        $fechaNac = $_POST['bornDateWorker'];
+        $curp = $_POST['curpWorker'];
+        $genero = intval($_POST['genereWorker']);
+        $idDireccion = $_POST['idDireccion'];
+        $calle = $_POST['streetWorker'];
+        $noExt = $_POST['externalNumberWorker'];
+        $noInt = $_POST['internalNumberWorker'];
+        $col = $_POST['suburbWorker'];
+        $municipio = $_POST['cityWorker'];
+        $estado = $_POST['stateWorker'];
+        $cp = $_POST['zipWorker'];
+        $email = $_POST['emailWorker'];
+        $celular = $_POST['mobileWorker'];
+        $telefono = $_POST['phoneWorker'];
+        $contactoEmergencia = $_POST['emergencyContactWorker'];
+        $telefonoEmergencia = $_POST['emergencyPhoneWorker'];
+        $empresa = $_POST['businessWorker'];
+        $salario = floatval($_POST['salaryWorker']);
+        $puesto = $_POST['jobWorker'];
+        $fechaIng = $_POST['admissionDateWorker'];
+        $noContrato = $_POST['contractNumberWorker'];
+        $objetoContrato = $_POST['contractObjectWorker'];
+        $rfc = $_POST['rfcWorker'];
+        $nss = $_POST['nssWorker'];
+        $estadoSalud = intval($_POST['healthyWorker']);
+        $observacionesMedicas = $_POST['medicalNotesWorker'];
+
+        //realizamos las consultas en las tablas correspondientes.
+        $sqlModificarEmpleado = "UPDATE Empleado SET idEmpresa=$empresa, tEmergencia='$telefonoEmergencia', nombres='$nombre', 
+        aPaterno='$apellidoPaterno', aMaterno='$apellidoMaterno', fechaNacimiento='$fechaNac', curp='$curp', noCelular='$celular',
+        noCasa='$telefono', mail='$email', genero=$genero, cEmergencia='$contactoEmergencia', sueldo=$salario, 
+        fechaIngreso='$fechaIng', puesto='$puesto', noContrato='$noContrato', oMedica='$observacionesMedicas', salud=$estadoSalud, 
+        nss='$nss', rfc='$rfc', objContrato='$objetoContrato' WHERE noTrabajador=$idTrabajador";
+        mysqli_query($conn, $sqlModificarEmpleado);
+        $sqlDireccion =" ";
+        if($noInt == NULL){
+            $sqlDireccion = "UPDATE Direccion SET calle='$calle', noExterior=$noExt, noInterior=NULL, cp='$cp', colonia='$col', 
+                        municipio='$municipio', estado='$estado' WHERE idDireccion=$idDireccion";
+        }
+        else{
+            $sqlDireccion = "UPDATE Direccion SET calle='$calle', noExterior=$noExt, noInterior=$noInt, cp='$cp', colonia='$col', 
+                        municipio='$municipio', estado='$estado' WHERE idDireccion=$idDireccion";
+        }
+        mysqli_query($conn, $sqlDireccion);
+
+        $des = "MODIFICÓ TRABAJADOR $idTrabajador";
+        nvo($des);
+        //include ("cerrarConexion.php");
+    }
 ?>
