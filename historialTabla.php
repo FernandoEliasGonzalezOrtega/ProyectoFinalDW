@@ -5,7 +5,7 @@
     exit();
   }
   require './partials/historial.php';
-  $des = " CONSULTA HISTORIAL";
+  $des = "CONSULTÓ HISTORIAL";
   nvo($des);
     function Updhistorial(){
         require 'bd.php';
@@ -13,6 +13,7 @@
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $stmt->bind_result($usuario, $fecha, $descripcion);
+      //Función para llenar la tabla de el historial
         while ($stmt->fetch()) {
            echo "<div class='row'><div class='col-sm-4'><p>".$usuario."</p></div><div class='col-sm-4'><p>".$fecha."</p></div><div class='col-sm-4'><p>".$descripcion."</p></div></div>";
         }
