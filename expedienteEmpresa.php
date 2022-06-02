@@ -27,12 +27,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src='./assets/js/script.js'></script>
   </head>
-
   <body class="bg-C">
-
     <!--Header-->
     <?php require 'partials/headerIn.php'; ?>
-
     <!-- Expediente-título -->
     <div class="container">
       <div class="row expediente-1">
@@ -104,11 +101,7 @@
         <a href='./empresasEdit.php' class="btn btn-guardar btn-lg">Volver</a>
       </div>
     </div>
-
-
     <!--Footer-->
     <?php require 'partials/footerIn.php'; ?>
-
   </body>
-
 </html>
