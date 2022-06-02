@@ -16,7 +16,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Expediente de trabajador</title>
@@ -25,12 +24,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <script src='./assets/js/script.js'></script>
   </head>
-
   <body class="bg-C">
-
     <!--Header-->
     <?php require 'partials/headerIn.php'; ?>
-
     <!-- Expediente-título -->
     <div class="container">
       <div class="row expediente-1">
@@ -169,12 +165,8 @@
 
     <!--Footer-->
     <?php require 'partials/footerIn.php'; ?>
-
   </body>
-
 </html>
-
-
 <?php
   // En la variable $html se va a recibir todo el contenido que vamos a mandar a DOMPDF para crear el archivo.
   $html = ob_get_clean();
